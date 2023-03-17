@@ -18,3 +18,4 @@ export class CadastroComponent {
     return true;
   }
 }
+export class AppModule { }
