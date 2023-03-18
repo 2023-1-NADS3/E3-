@@ -1,19 +1,27 @@
 form {
-  max-width: 80%;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
-  text-align: left;
   flex-direction: column;
   align-items: center;
 }
 
 h1{
-    margin-bottom: 60px;
+    margin-bottom: 7%;
 }
 
 label {
+  font-weight: bold;
   display: block;
   margin-bottom: 5px;
+}
+
+.label_input{
+  width: 80%;
+}
+
+label a{
+  color: #333;
 }
 
 input[type="text"],
@@ -22,7 +30,6 @@ input[type="email"],
 input[type="tel"] {
   padding: 8px;
   margin-bottom: 20px;
-  max-width: 250px;
   width: 100%;
   border-radius: 20px;
   border: none;
@@ -31,39 +38,12 @@ input[type="tel"] {
   font-size: 12px;
 }
 
-input[type="checkbox"] {
-  display: none;
-}
-
-.checkmark {
-  position: relative;
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  margin-right: 5px;
-  background-color: #ccc;
-  border-radius: 50px;
-}
-
-.checkmark::after {
-  content: "";
-  position: absolute;
-  display: none;
-  left: 5px;
-  top: 2px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-
-input[type="checkbox"]:checked + label .checkmark {
-  background-color: #2196f3;
-}
-
-input[type="checkbox"]:checked + label .checkmark::after {
-  display: block;
+.aceitar-termos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-top: 10px;
 }
 
 .buttons {
@@ -74,13 +54,73 @@ input[type="checkbox"]:checked + label .checkmark::after {
   align-items: center;
   font-weight: 700;
   border: none;
-  margin-top: 20%;
+  margin-top: 7%;
   padding: 20px 70px;
   font-size: 15px;
 }
 
-.aceitar-termos {
-  display: flex;
+.checkbox-wrapper-31:hover .check {
+  stroke-dashoffset: 0;
+}
 
-  margin-top: 20px;
+.checkbox-wrapper-31 {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+}
+
+.checkbox-wrapper-31 .background {
+  fill: #fff;
+  transition: ease all 0.6s;
+  -webkit-transition: ease all 0.6s;
+}
+
+.checkbox-wrapper-31 .stroke {
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+  stroke-dashoffset: 100;
+  stroke-dasharray: 100;
+  transition: ease all 0.6s;
+  -webkit-transition: ease all 0.6s;
+}
+
+.checkbox-wrapper-31 .check {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  stroke-dashoffset: 22;
+  stroke-dasharray: 22;
+  transition: ease all 0.6s;
+  -webkit-transition: ease all 0.6s;
+}
+
+.checkbox-wrapper-31 input[type=checkbox] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+.checkbox-wrapper-31 input[type=checkbox]:hover {
+  cursor: pointer;
+}
+
+.checkbox-wrapper-31 input[type=checkbox]:checked + svg .background {
+  fill: #3fb592;
+  ;
+}
+
+.checkbox-wrapper-31 input[type=checkbox]:checked + svg .stroke {
+  stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-31 input[type=checkbox]:checked + svg .check {
+  stroke-dashoffset: 0;
 }
