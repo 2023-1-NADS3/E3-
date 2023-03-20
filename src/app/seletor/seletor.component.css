@@ -1,79 +1,100 @@
 .card {
+  max-width: 360px;
+  width: 80%;
+  filter: drop-shadow(0 2px 5px #333333);
   margin-top: 10px;
   padding: 20px;
   border-radius: 30px;
-  max-width: 360px;
   background-color: #fff;
-  width: 80%;
-  height: 480px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
 }
 
 .informacoes_superiores {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-.esquerda{
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: start;
+.esquerda {
+  display: flex;
+  flex-direction: column;
 }
 
-.direita{
-    display: flex;
-    justify-content: right;
-    align-items: start;
+.direita {
+  display: flex;
+  justify-content: right;
+  align-items: start;
 }
 
 h2 {
-  font-size: 12px;
+  font-size: 17px;
   font-weight: bold;
+  margin: 0;
 }
 
-h3 {
-  font-size: 12px;
-}
-
-h4 {
-  font-size: 9px;
+p {
+  font-size: 15px;
+  margin: 0;
 }
 
 .informacoes_inferiores {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  align-self: self-start;
+  margin-top: 5px;
 }
 
-.card img {
-  max-width: 200px;
-  display: flex;
-  align-content: stretch;
+.img_card {
+  border-radius: 10px;
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
 }
 
 .buttons {
   display: flex;
-  align-content: space-between;
+  margin-top: 10px;
+  width: 100%;
+  justify-content: space-around;
 }
 
 .botao_nao {
   background-color: #c7e4bb;
   border: none;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 50px;
+}
+
+button:active{
+  filter: blur(0 2px 5px #333333);
+  transform: scale(0.8);
+  transition: 0.1s ease-in;
+}
+
+.botao_nao img{
+  margin-top: 4px;
+  width: 50px;
+  height: 50px;
 }
 
 .botao_sim {
   background-color: #3fb592;
   border: none;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 50px;
 }
+
+.botao_sim img{
+  margin-top: 8px;
+  width: 60px;
+  height: 60px;
+}
+
+

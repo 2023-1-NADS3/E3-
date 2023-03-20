@@ -1,1 +1,75 @@
-<p>cadastro-posts works!</p>
+<div class="container">
+  <h1>Cadastre seu Post</h1>
+  <form>
+    <div class="label_input">
+      <label for="nome">Titulo:</label>
+      <input
+        type="text"
+        id="titulo"
+        name="titulo"
+        required
+        placeholder="Digite seu titulo"
+      />
+    </div>
+    <div class="label_input">
+      <label for="valor">Valor:</label>
+      <input
+        type="number"
+        id="valor"
+        name="valor"
+        required
+        placeholder="Digite o valor do seu produto"
+      />
+    </div>
+    <div class="label_input">
+      <label for="valor">Tipo:</label>
+      <input
+        type="text"
+        id="tipo"
+        name="tipo"
+        required
+        placeholder="Digite o tipo do seu produto"
+      />
+    </div>
+    <div class="label_input">
+      <label for="descricao">Descrição:</label>
+      <textarea
+        type="text"
+        id="descricao"
+        name="descricao"
+        required
+        placeholder="Descreva rápidamente seu produto"
+      >
+      </textarea>
+    </div>
+    <button class="buttons" type="submit">P U B L I C A R</button>
+  </form>
+  <div class="h1_seus_posts"><h1>Seu Posts</h1></div>
+  <div class="card">
+    <div class="informacoes">
+      <div class="informacoes_esquerda">
+        <h2>Banana Prata</h2>
+        <div class="descricao">
+          <p>
+            Vendo lindas Bananas Frescas e muito bem cuidadas. Venha conferir!
+            Só coisa boa!
+          </p>
+        </div>
+      </div>
+      <div class="informacoes_direita">
+        <p>18.MAR.23</p>
+        <img class="img_card" src="../../assets/img/imagem-card.jpg" alt="" />
+        <p>R$5,00 KG</p>
+      </div>
+    </div>
+    <div class="buttons_posts">
+      <div class="botao_esquerdo">
+        <button class="botao_editar">Editar</button>
+      </div>
+      <div class="botao_direito">
+        <button class="botao_excluir">Excluir</button>
+      </div>
+    </div>
+  </div>
+  <div class="espaco_footer"></div>
+</div>
