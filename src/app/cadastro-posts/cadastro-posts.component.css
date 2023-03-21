@@ -43,6 +43,8 @@ textarea {
   border-bottom: 1px solid #fff;
   box-sizing: border-box;
   font-size: 12px;
+  height: 80px;
+  resize: none;
 }
 
 .buttons {

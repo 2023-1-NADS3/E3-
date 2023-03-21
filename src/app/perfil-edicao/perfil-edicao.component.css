@@ -1,0 +1,135 @@
+.card {
+  max-width: 360px;
+  width: 80%;
+  padding: 20px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.esquerda {
+  display: flex;
+  flex-direction: column;
+}
+
+.direita {
+  display: flex;
+  justify-content: right;
+  align-items: start;
+}
+
+h2 {
+  font-size: 17px;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 15px;
+  margin: 0;
+}
+
+.informacoes_inferiores {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.img_card {
+  margin-bottom: 10px;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.label_input {
+  width: 100%;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+textarea {
+  padding: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  box-sizing: border-box;
+  font-size: 12px;
+  height: 80px;
+  resize: none;
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.botao_cancelar {
+  background-color: #c7e4bb;
+  font-weight: bold;
+  border: 2px solid #333;
+  width: 100px;
+  height: 60px;
+  border-radius: 40px;
+}
+
+.botao_concluir {
+  background-color: #3fb592;
+  font-weight: bold;
+  border: none;
+  width: 100px;
+  height: 60px;
+  border-radius: 40px;
+}
+
+.botao_alterar_conta {
+  background-color: #c7e4bb;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+
+.botao_alterar_conta img {
+  width: 25px;
+  height: 25px;
+}
+
+.botao_superior {
+  display: flex;
+  flex-direction: column;
+  align-self: self-end;
+}
+
+button:active {
+  filter: blur(0 2px 5px #333333);
+  transform: scale(0.8);
+  transition: 0.1s ease-in;
+}

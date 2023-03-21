@@ -13,6 +13,8 @@ import { PerfilProprioUsuarioComponent } from './perfil-proprio-usuario/perfil-p
 import { PerfilOutroUsuarioComponent } from './perfil-outro-usuario/perfil-outro-usuario.component';
 import { PerfilEdicaoComponent } from './perfil-edicao/perfil-edicao.component';
 import { RedefinirSenhaComponent } from './redefinir-senha/redefinir-senha.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -30,8 +32,10 @@ import { RedefinirSenhaComponent } from './redefinir-senha/redefinir-senha.compo
     RedefinirSenhaComponent
   ],
   imports: [
+    MatSlideToggleModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
