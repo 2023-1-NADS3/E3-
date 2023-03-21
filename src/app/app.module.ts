@@ -15,9 +15,11 @@ import { PerfilEdicaoComponent } from './perfil-edicao/perfil-edicao.component';
 import { RedefinirSenhaComponent } from './redefinir-senha/redefinir-senha.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
+    FooterComponent,
     AppComponent,
     HomeComponent,
     CadastroComponent,
@@ -29,7 +31,10 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     PerfilProprioUsuarioComponent,
     PerfilOutroUsuarioComponent,
     PerfilEdicaoComponent,
-    RedefinirSenhaComponent
+    RedefinirSenhaComponent,
+  ],
+  exports: [
+    FooterComponent
   ],
   imports: [
     MatSlideToggleModule,

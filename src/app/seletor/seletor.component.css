@@ -52,7 +52,7 @@ p {
 .img_card {
   border-radius: 10px;
   width: 300px;
-  height: 350px;
+  height: 280px;
   object-fit: cover;
 }
 
