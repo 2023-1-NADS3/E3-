@@ -1,36 +1,30 @@
 <div class="container">
-    <h1>Redefina sua senha</h1>
-    <form>
-      <div class="label_input">
-        <label for="nome">Senha atual:</label>
-        <input
-          type="text"
-          id="senha"
-          name="senha"
-          required
-          placeholder="senha"
-        />
+  <h1>Redefina sua senha</h1>
+  <form>
+    <div class="label_input">
+      <label for="nome">Senha atual:</label>
+      <input type="text" id="senha" name="senha" required placeholder="senha" />
+    </div>
+    <div class="label_input">
+      <label for="nome">Senha nova:</label>
+      <input type="text" id="senha" name="senha" required placeholder="senha" />
+    </div>
+    <div class="label_input">
+      <label for="nome">Confirmar senha:</label>
+      <input type="text" id="senha" name="senha" required placeholder="senha" />
+    </div>
+    <div class="buttons">
+      <div class="botao_esquerdo">
+        <a href="../perfil-proprio-usuario/"
+          ><button class="botao_esquerda">Cancelar</button></a
+        >
       </div>
-      <div class="label_input">
-        <label for="nome">Senha nova:</label>
-        <input
-          type="text"
-          id="senha"
-          name="senha"
-          required
-          placeholder="senha"
-        />
+      <div class="botao_direito">
+        <a href="../perfil-proprio-usuario/"
+          ><button class="botao_direita">Confirmar</button></a
+        >
       </div>
-      <div class="label_input">
-        <label for="nome">Confirmar senha:</label>
-        <input
-          type="text"
-          id="senha"
-          name="senha"
-          required
-          placeholder="senha"
-        />
-      </div>
-      <button class="buttons" type="submit">Confirmar Alteração</button>
-    </form>
-    <app-footer></app-footer>
+    </div>
+  </form>
+  <app-footer></app-footer>
+</div>

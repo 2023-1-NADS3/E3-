@@ -26,6 +26,10 @@ body {
   font-size: 15px;
 }
 
+a{
+  text-decoration: none;
+}
+
 .logo {
   display: flex;
   flex-direction: column;
