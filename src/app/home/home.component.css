@@ -78,6 +78,10 @@
   margin-bottom: 10px;
 }
 
+.area_login_redes{
+  
+}
+
 .login_redes:active{
   transition: 0.1s ease-in;
   background-color: #3fb592;
