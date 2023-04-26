@@ -42,7 +42,7 @@ export class AppComponent {
     (resultado) =>
     {
       console.log(resultado);
-      this.valor=resultado;
+      this.valor=JSON.stringify(resultado);
     });
   }
 }
