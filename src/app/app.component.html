@@ -1,4 +1,13 @@
 <button (click)="Conectar()">CONECTAR</button>
+
 <input type="text" #caixa 
 (click)="EnviarDados(caixa.value)">
+
+<p>Caixa onde cada letra pressionada 
+    altera um campo do app</p>
+<input type="text" #caixa2
+(keyup)="AlterarCampo(caixa2.value)">>
+<button (click)="Clicando()">Alterar no clique!</button>
+<p>Campo a ser alterado: {{valor}}</p>
+
 <router-outlet></router-outlet>

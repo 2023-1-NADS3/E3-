@@ -28,4 +28,21 @@ export class AppComponent {
         console.log(msg);
     });
   }
+
+  valor="";
+  
+  AlterarCampo(valorCaixa:string)
+  {
+    this.valor=valorCaixa;
+  }
+
+  Clicando()
+  {
+    $.get("http://localhost:3000/todos_usuarios",
+    (resultado) =>
+    {
+      console.log(resultado);
+      this.valor=resultado;
+    });
+  }
 }
