@@ -1,0 +1,1 @@
+Para esta entregta referente as pesquisas realizadas em sala de aula e via formulário do google, eu colaborei com a criação das perguntas e com as entrevidas com os supostos usuários chegando na coclusão da nossa persona.
