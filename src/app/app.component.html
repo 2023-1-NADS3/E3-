@@ -1,10 +1,20 @@
 <button (click)="Conectar()">CONECTAR</button>
 
-<input type="text" #caixa 
-(click)="EnviarDados(caixa.value)">
-
+<input type="text" #caixa/>
 <p>Caixa onde cada letra pressionada 
     altera um campo do app</p>
+
+<p>NOME</p>
+<input type="text" #nome/>
+<p>IDADE</p>
+<input type="number" #idade/>
+<p>PROFISSÃO</p>
+<input type="text" #profissao/>
+<p>SALÁRIO</p>
+<input type="number" #salario/>
+
+<button (click)="EnviarDados(nome.value, idade.value, profissao.value, salario.value)">Salvar no Banco</button>
+
 <input type="text" #caixa2
 (keyup)="AlterarCampo(caixa2.value)">>
 <button (click)="Clicando()">Alterar no clique!</button>

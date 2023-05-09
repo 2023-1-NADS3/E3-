@@ -9,7 +9,6 @@ import * as $ from 'jquery' ;
 
 export class AppComponent {
   title = 'SlowFu';
-
   Conectar(){
     $.get("http://localhost:3000/",
       function(resultado)
@@ -18,9 +17,15 @@ export class AppComponent {
       });
   }
 
-  EnviarDados(valor:string)
+  EnviarDados(nome:string, idade:string, profissao:string, salario:string)
   {
-    var json = {"dado": valor};
+    var json = {
+      "nome":nome, 
+      "idade":idade, 
+      "profissao":profissao, 
+      "salario":salario
+    };
+
     $.post("http://localhost:3000/dado",
     json,
     function (msg)
@@ -41,7 +46,6 @@ export class AppComponent {
     $.get("http://localhost:3000/todos_usuarios",
     (resultado) =>
     {
-      console.log(resultado);
       this.valor=JSON.stringify(resultado);
     });
   }
