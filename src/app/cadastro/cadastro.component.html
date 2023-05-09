@@ -9,6 +9,7 @@
         name="nome"
         required
         placeholder="Digite seu nome"
+        #nome
       />
     </div>
     <div class="label_input">
@@ -19,6 +20,7 @@
         name="senha"
         required
         placeholder="Digite sua senha"
+        #senha
       />
     </div>
     <div class="label_input">
@@ -29,6 +31,7 @@
         name="email"
         required
         placeholder="Digite seu email"
+        #email
       />
     </div>
     <div class="label_input">
@@ -39,6 +42,7 @@
         name="telefone"
         required
         placeholder="Digite seu telefone"
+        #telefone
       />
     </div>
     <div class="aceitar-termos">
@@ -61,6 +65,6 @@
         </svg>
       </div>
     </div>
-    <button class="buttons" type="submit">Criar Conta</button>
+    <button class="buttons" (click)="CriarConta(nome.value, senha.value, email.value, telefone.value)">Criar Conta</button>
   </form>
 </div>

@@ -6,5 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./chat.component.css']
 })
 export class ChatComponent {
+  title = 'SlowFu';
+  Conectar(){
+    $.get("http://localhost:3000/",
+      function(resultado)
+      {
+        console.log(resultado);
+      });
+  }
 
+  valor="";  
+  AlterarCampo(valorCaixa:string)
+  {
+    this.valor=valorCaixa;
+  }
+
+  Clicando()
+  {
+    $.get("http://localhost:3000/todos_usuarios",
+    (resultado) =>
+    {
+      this.valor=JSON.stringify(resultado);
+    });
+  }
 }

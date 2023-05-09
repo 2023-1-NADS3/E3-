@@ -8,45 +8,5 @@ import * as $ from 'jquery' ;
 })
 
 export class AppComponent {
-  title = 'SlowFu';
-  Conectar(){
-    $.get("http://localhost:3000/",
-      function(resultado)
-      {
-        console.log(resultado);
-      });
-  }
 
-  EnviarDados(nome:string, idade:string, profissao:string, salario:string)
-  {
-    var json = {
-      "nome":nome, 
-      "idade":idade, 
-      "profissao":profissao, 
-      "salario":salario
-    };
-
-    $.post("http://localhost:3000/dado",
-    json,
-    function (msg)
-    {
-        console.log(msg);
-    });
-  }
-
-  valor="";
-  
-  AlterarCampo(valorCaixa:string)
-  {
-    this.valor=valorCaixa;
-  }
-
-  Clicando()
-  {
-    $.get("http://localhost:3000/todos_usuarios",
-    (resultado) =>
-    {
-      this.valor=JSON.stringify(resultado);
-    });
-  }
 }

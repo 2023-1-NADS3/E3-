@@ -1,5 +1,10 @@
+.logo img{
+  width: 250px;
+}
+
 .buttons {
   width: 100%;
+  margin-top: 70px;
   font-family: "Poppins";
   display: flex;
   flex-direction: column;
