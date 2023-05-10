@@ -16,6 +16,8 @@ import { RedefinirSenhaComponent } from './redefinir-senha/redefinir-senha.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { Router, RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -40,9 +42,13 @@ import { FooterComponent } from './footer/footer.component';
     MatSlideToggleModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    RouterModule.forRoot([])
   ],
-  providers: [],
+  providers: [
+    Router
+  ],
   bootstrap: [AppComponent]
 })
 
