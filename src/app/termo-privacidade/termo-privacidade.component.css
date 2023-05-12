@@ -1,0 +1,24 @@
+.logo img{
+    width: 250px;
+  }
+
+.texto_termo{
+    padding: 20px 50px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.link{
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 25px;
+    background-color: #3fb592;
+}
+
+.link:active {
+    transition: 0.1s ease-in;
+    background-color: #3fb592;
+    border: 2px solid #3fb592;
+    transform: scale(0.9);
+  }

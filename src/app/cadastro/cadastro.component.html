@@ -1,6 +1,5 @@
 <div class="container">
   <h1>Quase lá...</h1>
-  <div *ngIf="emailJaExiste" class="error-message">O email já existe</div>
   <form>
     <div class="label_input">
       <label for="nome">Nome:</label>
@@ -38,7 +37,7 @@
     <div class="label_input">
       <label for="telefone">Telefone:</label>
       <input
-        type="tel"
+        type="number"
         id="telefone"
         name="telefone"
         required
@@ -49,13 +48,13 @@
     <div class="aceitar-termos">
       <div>
         <label for="termos">
-          <a href="https://sincopa360.com.br">
+          <a href="/termo-privacidade/">
             Concordo com os Termos e Condições e a Política de Privacidade
           </a>
         </label>
       </div>
       <div class="checkbox-wrapper-31">
-        <input type="checkbox" />
+        <input type="checkbox" id="termo"/>
         <svg viewBox="0 0 35.6 35.6">
           <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
           <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>

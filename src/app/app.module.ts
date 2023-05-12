@@ -18,6 +18,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Router, RouterModule } from '@angular/router';
+import { TermoPrivacidadeComponent } from './termo-privacidade/termo-privacidade.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { Router, RouterModule } from '@angular/router';
     PerfilOutroUsuarioComponent,
     PerfilEdicaoComponent,
     RedefinirSenhaComponent,
+    TermoPrivacidadeComponent,
   ],
   exports: [
     FooterComponent

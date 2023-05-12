@@ -11,6 +11,7 @@ import { PerfilEdicaoComponent } from './perfil-edicao/perfil-edicao.component';
 import { PerfilOutroUsuarioComponent } from './perfil-outro-usuario/perfil-outro-usuario.component';
 import { PerfilProprioUsuarioComponent } from './perfil-proprio-usuario/perfil-proprio-usuario.component';
 import { RedefinirSenhaComponent } from './redefinir-senha/redefinir-senha.component';
+import { TermoPrivacidadeComponent } from './termo-privacidade/termo-privacidade.component';
 import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'redefinir-senha', component:  RedefinirSenhaComponent},
   { path: 'chat-home', component:  ChatHomeComponent},
   { path: 'chat', component: ChatComponent },
+  { path: 'termo-privacidade', component: TermoPrivacidadeComponent },
   { path: 'footer', component: FooterComponent }
 ];
 
