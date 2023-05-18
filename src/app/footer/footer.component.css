@@ -1,3 +1,7 @@
+.chat-e-perfil{
+    display: none;
+}
+
 .footer{
     filter: drop-shadow(0 0px 8px #333333);
     border-radius: 20px 20px 0 0;
