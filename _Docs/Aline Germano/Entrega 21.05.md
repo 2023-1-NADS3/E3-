@@ -1,0 +1,1 @@
+Nesta etapa finala do projeto realizamos a analise e ajustes da documentação final do projeto, para garantir a qualidade das informações para as atividades realizadas em sala de aula com os devidos temas solicitados pelo professor Chico.
