@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import * as $ from 'jquery' ;
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { TermoPrivacidadeComponent } from '../termo-privacidade/termo-privacidade.component';
 
 @Component({
   selector: 'app-cadastro-posts',
@@ -13,7 +14,7 @@ export class CadastroPostsComponent {
   constructor(private http: HttpClient, private router: Router) { }
 
 
-  CriarPost(titulo:string, valor:string, descricao:string) 
+  CriarPost(titulo:string, valor:string, tipo:string, descricao:string) 
   {
     console.log("Passei no primeiro ponto do cadastro");
     let termo = document.getElementById("termo") as HTMLInputElement;
@@ -32,6 +33,7 @@ export class CadastroPostsComponent {
       "titulo":titulo, 
       "valor":valor,
       "descricao":descricao, 
+      "tipo":tipo,
       //"data":data,
       //"local":local,
       //emailSalvo:email, 
