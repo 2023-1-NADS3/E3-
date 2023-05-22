@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Cadastre seu Post</h1>
-  <form>
+  <div class="form">
     <div class="label_input">
       <label for="nome">Titulo:</label>
       <input
@@ -9,6 +9,7 @@
         name="titulo"
         required
         placeholder="Digite seu titulo"
+        #titulo
       />
     </div>
     <div class="label_input">
@@ -19,6 +20,7 @@
         name="valor"
         required
         placeholder="Digite o valor do seu produto"
+        #valor
       />
     </div>
     <div class="label_input">
@@ -28,7 +30,7 @@
         id="tipo"
         name="tipo"
         required
-        placeholder="Digite o tipo do seu produto"
+        placeholder="Selecione o tipo do seu produto"
       />
     </div>
     <div class="label_input">
@@ -39,27 +41,28 @@
         name="descricao"
         required
         placeholder="Descreva rápidamente seu produto"
+        #descricao
       >
       </textarea>
     </div>
     <button class="buttons" type="submit">P U B L I C A R</button>
-  </form>
+  </div>
   <div class="h1_seus_posts"><h1>Seu Posts</h1></div>
   <div class="card">
     <div class="informacoes">
       <div class="informacoes_esquerda">
-        <h2>Banana Prata</h2>
+        <h2 #titulo>Banana Prata</h2>
         <div class="descricao">
-          <p>
+          <p #descricao>
             Vendo lindas Bananas Frescas e muito bem cuidadas. Venha conferir!
             Só coisa boa!
           </p>
         </div>
       </div>
       <div class="informacoes_direita">
-        <p>18.MAR.23</p>
+        <p #data>18.MAR.23</p>
         <img class="img_card" src="../../assets/img/imagem-card.jpg" alt="" />
-        <p>R$5,00 KG</p>
+        <p #valor>R$5,00 KG</p>
       </div>
     </div>
     <div class="buttons_posts">
