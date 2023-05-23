@@ -13,7 +13,7 @@
       />
     </div>
     <div class="label_input">
-      <label for="valor">Valor:</label>
+      <label for="valor">Valor do quilo (R$):</label>
       <input
         type="number"
         id="valor"
@@ -25,72 +25,135 @@
     </div>
     <div class="label_input">
       <label for="valor">Tipo:</label>
-        <select class="label_input select_input" name="tipo" id="tipo" required #tipo>
-          <option value="rota">Abacate</option>
-          <option value="">Abacaxi</option>
-          <option value="">Abóbora</option>
-          <option value="">Abobrinha</option>
-          <option value="">Açaí</option>
-          <option value="">Acelga</option>
-          <option value="">Agrião</option>
-          <option value="">Alface</option>
-          <option value="">Ameixa</option>
-          <option value="">Amora</option>
-          <option value="">Arroz</option>
-          <option value="">Aspargo</option>
-          <option value="">Azeite</option>
-          <option value="">Azeitona</option>
-          <option value="">Banana</option>
-          <option value="">Batata</option>
-          <option value="">Batata Doce</option>
-          <option value="">Beringela</option>
-          <option value="">Beterraba</option>
-          <option value="">Brócolis</option>
-          <option value="">Cacau</option>
-          <option value="">Café</option>
-          <option value="">Cajú</option>
-          <option value="">Carambola</option>
-          <option value="">Cebola</option>
-          <option value="">Cebolinha</option>
-          <option value="">Cenoura</option>
-          <option value="">Cereja</option>
-          <option value="">Chuchu</option>
-          <option value="">Coco</option>
-          <option value="">Coentro</option>
-          <option value="">Cogumelo</option>
-          <option value="">Couve</option>
-        </select>
+      <select
+        class="label_input select_input"
+        name="tipo"
+        id="tipo"
+        required
+        #tipo
+      >
+        <option value="abacate.jpeg">Abacate</option>
+        <option value="abacaxi.jpeg">Abacaxi</option>
+        <option value="abobora.jpeg">Abóbora</option>
+        <option value="abobrinha.jpeg">Abobrinha</option>
+        <option value="acai.jpeg">Açaí</option>
+        <option value="acelga.jpeg">Acelga</option>
+        <option value="agriao.jpeg">Agrião</option>
+        <option value="alface.jpeg">Alface</option>
+        <option value="ameixa.jpeg">Ameixa</option>
+        <option value="amora.jpeg">Amora</option>
+        <option value="arroz.jpeg">Arroz</option>
+        <option value="aspargo.jpeg">Aspargo</option>
+        <option value="azeiteNatural.jpeg">
+          Azeite
+        </option>
+        <option value="azeitona.jpeg">Azeitona</option>
+        <option value="banana.jpeg">Banana</option>
+        <option value="batata.jpeg">Batata</option>
+        <option value="batataDoce.jpeg">
+          Batata Doce
+        </option>
+        <option value="beringela.jpeg">Beringela</option>
+        <option value="beterraba.jpeg">Beterraba</option>
+        <option value="brocolis.jpeg">Brócolis</option>
+        <option value="cacau.jpeg">Cacau</option>
+        <option value="cafe.jpeg">Café</option>
+        <option value="caju.jpeg">Cajú</option>
+        <option value="carambola.jpeg">Carambola</option>
+        <option value="cebola.jpeg">Cebola</option>
+        <option value="cebolinha.jpeg">Cebolinha</option>
+        <option value="cenora.jpeg">Cenoura</option>
+        <option value="cereja.jpeg">Cereja</option>
+        <option value="chuchu.jpeg">Chuchu</option>
+        <option value="coco.jpeg">Coco</option>
+        <option value="coentro.jpeg">Coentro</option>
+        <option value="cogumelo.jpeg">Cogumelo</option>
+        <option value="couve.jpeg">Couve</option>
+        <option value="ervilha.jpeg">Ervilha</option>
+        <option value="espinafre.jpeg">Espinafre</option>
+        <option value="feijao.jpeg">Feijão</option>
+        <option value="figo.jpeg">Figo</option>
+        <option value="framboesa.jpeg">Framboesa</option>
+        <option value="goiaba.jpeg">Goiaba</option>
+        <option value="granola.jpeg">Granola</option>
+        <option value="graDeBico.jpeg">
+          Grão De Bico
+        </option>
+        <option value="groselha.jpeg">Groselha</option>
+        <option value="inhame.jpeg">Inhame</option>
+        <option value="jabuticaba.jpeg">
+          Jabuticaba
+        </option>
+        <option value="jaca.jpeg">Jaca</option>
+        <option value="kiwi.jpeg">Kiwi</option>
+        <option value="laranja.jpeg">Laranja</option>
+        <option value="lichia.jpeg">Lichia</option>
+        <option value="limao.jpeg">Limão</option>
+        <option value="linhaca.jpeg">Linhaça</option>
+        <option value="mandioca.jpeg">Mandioca</option>
+        <option value="manga.jpeg">Manga</option>
+        <option value="maracuja.jpeg">Maracujá</option>
+        <option value="mel.jpeg">Mel</option>
+        <option value="melancia.jpeg">Melancia</option>
+        <option value="melao.jpeg">Melão</option>
+        <option value="milho.jpeg">Milho</option>
+        <option value="morango.jpeg">Morango</option>
+        <option value="pepino.jpeg">Pepino</option>
+        <option value="pessego.jpeg">Pêssego</option>
+        <option value="pimenta.jpeg">Pimenta</option>
+        <option value="pimentao.jpeg">Pimentão</option>
+        <option value="pinha.jpeg">
+          Pinha ou Pinhão
+        </option>
+        <option value="rabanete.jpeg">Rabanete</option>
+        <option value="repolho.jpeg">Repolho</option>
+        <option value="roma.jpeg">Romã</option>
+        <option value="rucula.jpeg">Rúcula</option>
+        <option value="tamarindo.jpeg">Tamarindo</option>
+        <option value="tomate.jpeg">Tomate</option>
+        <option value="uva.jpeg">Uva</option>
+        <option value="zzOutrosVariedades.jpeg">
+          Outros / Variedades
+        </option>
+      </select>
     </div>
     <div class="label_input">
       <label for="descricao">Descrição:</label>
       <textarea
+        class="textarea"
         type="text"
         id="descricao"
         name="descricao"
         required
         placeholder="Descreva rápidamente seu produto"
         #descricao
-      >
-      </textarea>
+      ></textarea>
     </div>
-    <button class="buttons" type="submit">P U B L I C A R</button>
+    <button
+      class="buttons"
+      (click)="
+        CriarPost(titulo.value, valor.value, tipo.value, descricao.value)
+      "
+    >
+      P U B L I C A R
+    </button>
   </div>
   <div class="h1_seus_posts"><h1>Seu Posts</h1></div>
-  <div class="card">
+  <div class="card" *ngFor="let post of posts">
     <div class="informacoes">
       <div class="informacoes_esquerda">
-        <h2 #titulo>Banana Prata</h2>
+        <h2 #titulo>{{ post.titulo }}</h2>
         <div class="descricao">
           <p #descricao>
-            Vendo lindas Bananas Frescas e muito bem cuidadas. Venha conferir!
-            Só coisa boa!
+            {{ post.descricao }}
           </p>
         </div>
       </div>
       <div class="informacoes_direita">
-        <p #data>18.MAR.23</p>
-        <img class="img_card" src="../../assets/img/imagem-card.jpg" alt="" />
-        <p #valor>R$5,00 KG</p>
+        <p #data>{{ post.data }}</p>
+        <img class="img_card" src='../../assets/img/posts/{{post.tipo}}' alt="" />
+        <p #valor>R${{ post.valor }} KG</p>
+        <input type="text" class="postID" value={{post.tipo}} #postID>
       </div>
     </div>
     <div class="buttons_posts">
@@ -98,7 +161,7 @@
         <button class="botao_editar">Editar</button>
       </div>
       <div class="botao_direito">
-        <button class="botao_excluir">Excluir</button>
+        <button class="botao_excluir" (click)="DeletarPost(postID.value)">Excluir</button>
       </div>
     </div>
   </div>

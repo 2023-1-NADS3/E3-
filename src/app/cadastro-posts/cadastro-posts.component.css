@@ -43,7 +43,7 @@ input[type="number"] {
   border: none;
   border-bottom: 1px solid #fff;
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 textarea {
@@ -54,7 +54,7 @@ textarea {
   border: none;
   border-bottom: 1px solid #fff;
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: 13px;
   height: 80px;
   resize: none;
 }
@@ -144,6 +144,10 @@ p {
 .buttons_posts {
   display: flex;
   justify-content: space-evenly;
+}
+
+.postID{
+  display: none;
 }
 
 .botao_editar {

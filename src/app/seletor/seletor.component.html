@@ -1,19 +1,19 @@
 <div class="container">
-  <div class="card">
+  <div class="card" *ngFor="let post of posts">
     <div class="informacoes_superiores">
       <div class="esquerda">
-        <h2 #local>Ceasa-SP</h2>
-        <p #telefone>11 94002-8922</p>
+        <h2 #local>{{ post.local }}</h2>
+        <p #telefone>{{ post.telefone }}</p>
       </div>
       <div class="direita">
-        <p #data>18.MAR.23</p>
+        <p #data>{{ post.data }}</p>
       </div>
     </div>
-    <img class="img_card" src="../../assets/img/imagem-card.jpg" alt="" #tipo/>
-    <div class="descricao_escondida" #descricao>Vendo lindas Bananas Frescas e muito bem cuidadas. Venha conferir! Só coisa boa!</div>
+    <img class="img_card" src="../../assets/img/posts/{{ post.tipo }}" alt="" #tipo/>
+    <div class="descricao_escondida" #descricao>{{post.descricao}}</div>
     <div class="informacoes_inferiores">
-      <p #titulo>Banana Prata</p>
-      <p #valor>R$5,00 KG</p>
+      <p #titulo>{{ post.titulo }}</p>
+      <p #valor>R${{ post.valor }} KG</p>
     </div>
     <div class="buttons">
       <div class="botao_esquerdo">
