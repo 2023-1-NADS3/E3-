@@ -27,6 +27,13 @@ label {
   width: 100%;
 }
 
+.select_input{
+  border-radius: 20px;
+  border:none;
+  padding: 7px 0;
+  margin-bottom: 20px;
+}
+
 input[type="text"],
 input[type="number"] {
   padding: 8px;

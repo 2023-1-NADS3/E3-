@@ -11,13 +11,39 @@ import { TermoPrivacidadeComponent } from '../termo-privacidade/termo-privacidad
 })
 export class CadastroPostsComponent {
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router) 
+  { 
+    this.dataAtual = new Date(); 
+    this.localizacao = {};
+  }
 
+  dataAtual: Date;
+  localizacao: any;
 
+  obterLocalizacao() {
+    
+  }
+
+  //CriarPost(titulo:string, valor:string, tipo:string, descricao:string, data:string, local:string, email:string, telefone:string) 
   CriarPost(titulo:string, valor:string, tipo:string, descricao:string) 
   {
     console.log("Passei no primeiro ponto do cadastro");
-    let termo = document.getElementById("termo") as HTMLInputElement;
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (posicao) => {
+          this.localizacao.latitude = posicao.coords.latitude;
+          this.localizacao.longitude = posicao.coords.longitude;
+          console.log(this.localizacao);
+          // Ou faça o que você precisar com a localização aqui
+        },
+        (erro) => {
+          console.log('Erro ao obter localização:', erro);
+        }
+      );
+    } else {
+      console.log('Geolocalização não suportada pelo navegador.');
+    }
 
     if(titulo.length < 3  || titulo.length > 20){
       alert("Seu titulo precisa ter entre 3 e 30 caracteres.");
@@ -34,10 +60,8 @@ export class CadastroPostsComponent {
       "valor":valor,
       "descricao":descricao, 
       "tipo":tipo,
-      //"data":data,
-      //"local":local,
-      //emailSalvo:email, 
-      //telefoneSalvo:telefone
+      "data":this.dataAtual,
+      "local":this.localizacao,
     }, 
     (res) => {
       console.log("Passei no terceiro ponto do cadastro");
