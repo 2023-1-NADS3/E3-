@@ -10,7 +10,8 @@ import { format } from 'date-fns';
   styleUrls: ['./cadastro-posts.component.css'],
 })
 export class CadastroPostsComponent {
-  constructor(private http: HttpClient, private router: Router) {
+  
+    constructor(private http: HttpClient, private router: Router) {
     this.dataAtual = new Date();
     this.localizacao = {};
     this.posts = [];
