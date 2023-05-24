@@ -88,6 +88,9 @@ export class CadastroPostsComponent {
   }
   
   DeletarPost(postID:string){
+    console.log("Função acionada");
+    console.log(postID);
+
     $.post('http://localhost:3000/delete_post_usuario', {
       "postID":postID
     }, (res) => {

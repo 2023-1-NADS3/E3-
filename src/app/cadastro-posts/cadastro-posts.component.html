@@ -153,15 +153,15 @@
         <p #data>{{ post.data }}</p>
         <img class="img_card" src='../../assets/img/posts/{{post.tipo}}' alt="" />
         <p #valor>R${{ post.valor }} KG</p>
-        <input type="text" class="postID" value={{post.tipo}} #postID>
       </div>
     </div>
     <div class="buttons_posts">
       <div class="botao_esquerdo">
-        <button class="botao_editar">Editar</button>
+        <textarea class="postID" #postID>{{post.postID}}</textarea>
+        <button class="botao_excluir" (click)="DeletarPost(postID.value)">Excluir</button>
       </div>
       <div class="botao_direito">
-        <button class="botao_excluir" (click)="DeletarPost(postID.value)">Excluir</button>
+        <button class="botao_editar">Editar</button>
       </div>
     </div>
   </div>

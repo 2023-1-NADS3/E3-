@@ -151,13 +151,14 @@ p {
 }
 
 .botao_editar {
+  display: none;
   background-color: #c7e4bb;
   border: none;
   width: 80px;
   height: 30px;
   font-size: 12px;
   border-radius: 20px;
-  margin-right: 65px;
+  margin-left: 65px;
 }
 
 .botao_excluir {
@@ -167,7 +168,7 @@ p {
   height: 30px;
   font-size: 12px;
   border-radius: 20px;
-  margin-left: 65px;
+  margin-right: 220px;
 }
 
 .espaco_footer{
