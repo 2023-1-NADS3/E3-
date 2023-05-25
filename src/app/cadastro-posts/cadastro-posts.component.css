@@ -17,6 +17,10 @@ h1 {
   font-weight: bold;
 }
 
+h2 {
+  text-transform: capitalize;
+}
+
 label {
   font-weight: bold;
   display: block;

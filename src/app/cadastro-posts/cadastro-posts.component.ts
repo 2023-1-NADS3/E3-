@@ -48,23 +48,24 @@ export class CadastroPostsComponent {
   }
 
   //CriarPost(titulo:string, valor:string, tipo:string, descricao:string, data:string, local:string, email:string, telefone:string)
-  CriarPost(titulo: string, valor: string, tipo: string, descricao: string) {
+  CriarPost(valor: string, tipo: string, descricao: string) {
     console.log('Passei no primeiro ponto do cadastro');
     let dataFormatada = format(this.dataAtual, 'dd.MM.yy');
 
-    if (titulo.length < 3 || titulo.length > 20) {
-      alert('Seu titulo precisa ter entre 3 e 30 caracteres.');
-      console.log('Seu titulo precisa ter entre 3 e 30 caracteres.');
-    } else if (descricao.length == 0) {
+    if (descricao.length == 0) {
       alert('Você precisa de uma descrição =)');
       console.log('O campo descrição está vazio');
-    } else {
+    } 
+    else if (descricao.length > 30){
+      alert('Sua descrição não pode passar de 30 caracteres.');
+      console.log('O campo descrição está maior que 30 caracteres');
+    }
+    else {
       console.log('Passei no segundo ponto do cadastro');
       this.obterLocalizacao();
       $.post(
         'http://localhost:3000/cadastro_post',
         {
-          "titulo": titulo,
           "valor": valor,
           "descricao": descricao,
           "tipo": tipo,

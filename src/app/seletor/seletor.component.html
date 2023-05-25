@@ -2,17 +2,18 @@
   <div class="card" *ngFor="let post of posts">
     <div class="informacoes_superiores">
       <div class="esquerda">
-        <h2 #local>{{ post.local }}</h2>
-        <p #telefone>{{ post.telefone }}</p>
+        <h2 #tipo class="tipo">{{ post.tipo}}</h2>
+        <p #nome>{{ post.nome }}</p>
       </div>
       <div class="direita">
-        <p #data>{{ post.data }}</p>
+        <h2 #data>{{ post.data }}</h2>
+        <p #local>{{ post.local }}</p>
+        <p></p>
       </div>
     </div>
-    <img class="img_card" src="../../assets/img/posts/{{ post.tipo }}" alt="" #tipo/>
-    <div class="descricao_escondida" #descricao>{{post.descricao}}</div>
+    <img class="img_card" src="../../assets/img/posts/{{ post.tipo }}.jpg" alt="" #tipo/>
     <div class="informacoes_inferiores">
-      <p #titulo>{{ post.titulo }}</p>
+      <p #descricao>{{ post.descricao}}</p>
       <p #valor>R${{ post.valor }} KG</p>
     </div>
     <div class="buttons">

@@ -27,8 +27,8 @@
 
 .direita {
   display: flex;
-  justify-content: right;
-  align-items: start;
+  text-align: right;
+  flex-direction: column;
 }
 
 .descricao_escondida{
@@ -101,4 +101,6 @@ button:active{
   height: 60px;
 }
 
-
+.tipo{
+  text-transform: capitalize;
+}

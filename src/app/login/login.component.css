@@ -48,7 +48,7 @@ input[type="email"] {
   cursor: pointer;
   border-radius: 30px;
   margin: 3%;
-  margin-top: 10%;
+  margin-top: 5%;
   margin-bottom: 10px;
 }
 
@@ -57,4 +57,9 @@ input[type="email"] {
   background-color: #3fb592;
   border: 2px solid #3fb592;
   transform: scale(0.9);
+}
+
+.cadastrar{
+  margin-top: 20px;
+  text-decoration: underline;
 }
