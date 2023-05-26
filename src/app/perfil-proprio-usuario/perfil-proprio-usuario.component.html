@@ -1,24 +1,25 @@
 <div class="container">
   <div class="card">
-    <div class="botao_superior">
-      <button class="botao_alterar_conta">
-        <a href="../perfil-edicao/"
-          >Editar conta <img src="../../assets/img/editar-icone.png" alt=""
-        /></a>
-      </button>
-    </div>
-    <img class="img_card" src="../../assets/img/img-perfil.jpg" alt="" />
+    <h1 class="titulo">Seus dados</h1>
+    <h2 class="subTitulo">Eles serão usados para os posts</h2>
+    <img class="img_card" src="../../assets/img/perfil-verde.png" alt="" />
     <div class="informacoes_inferiores">
-      <h2>Julia Maria De Souza</h2>
-      <p>Sou uma produtora de tomates que adora fazer compras pelo SlowFu</p>
+      <h2>{{nome}}</h2>
+      <p>{{email}}</p>
+      <p>Tel: {{telefone}}</p>
     </div>
     <div class="buttons">
       <div class="botao_esquerdo">
-        <a href="../redefinir-senha/"><button class="botao_senha">Alterar Senha</button></a>
+        <a href="../perfil-edicao/"
+          ><button class="botao_senha">Alterar Dados</button></a
+        >
       </div>
       <div class="botao_direito">
-        <button class="botao_deletar">Deletar Conta</button>
+        <button class="botao_deletar" (click)="DeletarUsuario()">Deletar Conta</button>
       </div>
+    </div>
+    <div class="buttons">
+      <button class="botao_sair" (click)="Sair()">Sair</button>
     </div>
   </div>
 </div>

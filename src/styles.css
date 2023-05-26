@@ -43,12 +43,27 @@ a{
   width: 200px;
 }
 
+.erro{
+  display: none;
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @media (min-width:850px)
 {
-  body{
+  .app-root{
     display: none;
+  }
+
+  .erro{
+    padding: 100px 300px;
+    display: flex;
+    text-align: center;
+  }
+
+  .erro h1{
+    font-family: "Poppins";
+    font-weight: bolder;
   }
 }

@@ -1,41 +1,61 @@
 <div class="container">
   <div class="card">
-    <h1>Seu Perfil</h1>
-    <div class="img_card">
-      <img alt="" />
-      <button class="botao_alterar_conta">
-        <img src="../../assets/img/editar-icone.png" alt="" />
-      </button>
-    </div>
+    <h1 class="titulo">Altere seus dados:</h1>
     <div class="informacoes_inferiores">
       <div class="label_input">
+        <label for="">Nome:</label>
         <input
           type="text"
-          id="valor"
-          name="valor"
+          id="nome"
+          name="nome"
           required
           placeholder="Seu nome"
+          #nome
         />
       </div>
       <div class="label_input">
+        <label for="">Sua senha atual:</label>
         <input
-          type="text"
-          id="tipo"
-          name="tipo"
+          type="password"
+          id="senhaAtual"
+          name="senhaAtual"
+          required
+          placeholder="Sua senha atual"
+          #senhaAtual
+        />
+      </div>
+      <div class="label_input">
+        <label for="">Sua nova senha:</label>
+        <input
+          type="password"
+          id="senha"
+          name="senha"
+          required
+          placeholder="Sua senha nova"
+          #senha
+        />
+      </div>
+      <div class="label_input">
+        <label for="">Seu email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
           required
           placeholder="Seu e-mail"
+          #email
         />
       </div>
       <div class="label_input">
-        <label for="descricao">Breve descrição:</label>
-        <textarea
-          type="text"
-          id="descricao"
-          name="descricao"
+        <label for="">Seu telefone:</label>
+        <input
+          type="number"
+          id="telefone"
+          name="telefone"
           required
-          placeholder="Descreva rápidamente seu produto"
-        >
-        </textarea>
+          placeholder="Telefone"
+          #telefone
+        />
       </div>
     </div>
     <div class="buttons">
@@ -43,9 +63,8 @@
         <a href="../perfil-proprio-usuario/"><button class="botao_cancelar">Cancelar</button></a>
       </div>
       <div class="botao_direito">
-        <button class="botao_concluir">Concluir</button>
+        <button class="botao_concluir" (click)="AlterarDados(nome.value, senhaAtual.value, senha.value, email.value, telefone.value)">Concluir</button>
       </div>
     </div>
   </div>
-</div>
 <app-footer></app-footer>

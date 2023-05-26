@@ -9,6 +9,16 @@
   align-items: center;
 }
 
+.titulo{
+  font-family: "Poppins";
+  font-weight: 600;
+  color: #333333;
+  text-align: center;
+  font-size: 22px;
+  margin: 10px 0;
+  padding: 0;
+}
+
 .esquerda {
   display: flex;
   flex-direction: column;
@@ -43,16 +53,7 @@ p {
   flex-direction: column;
   align-self: center;
   justify-content: center;
-  margin-top: 10px;
-}
-
-.img_card {
-  margin-bottom: 10px;
-  border: 5px solid #fff;
-  border-radius: 10px;
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
+  margin-top: 5px;
 }
 
 label {
@@ -66,7 +67,9 @@ label {
 }
 
 input[type="text"],
-input[type="number"] {
+input[type="number"],
+input[type="email"],
+input[type="password"] {
   padding: 8px;
   margin-bottom: 20px;
   width: 100%;

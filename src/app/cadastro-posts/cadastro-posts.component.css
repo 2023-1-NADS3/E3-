@@ -1,5 +1,6 @@
-.container{
-  margin-top: 20px;
+.topo{
+  padding-top: 50px;
+  padding-bottom: 10px;
 }
 
 .form {
@@ -95,12 +96,13 @@ p {
 
 .descricao{
     display: flex;
-    width: 180px;
+    padding-top: 25px;
+    width: 150px;
     max-height: 150px;
 }
 
 .h1_seus_posts{
-    margin-top: 20px;
+    padding-top: 40px;
 }
 
 .card {
@@ -139,8 +141,9 @@ p {
 
 .img_card {
   border-radius: 10px;
-  width: 80px;
-  height: 80px;
+  margin: 10px 0;
+  width: 100px;
+  height: 100px;
   border-radius: 50px;
   object-fit: cover;
 }
@@ -148,6 +151,7 @@ p {
 .buttons_posts {
   display: flex;
   justify-content: space-evenly;
+  margin-top: -35px;
 }
 
 .postID{
