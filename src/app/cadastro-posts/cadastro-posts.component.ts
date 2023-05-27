@@ -17,12 +17,19 @@ export class CadastroPostsComponent {
     this.posts = [];
   }
 
+  nome = localStorage.getItem('nome');
+  email = localStorage.getItem('email');
+  telefone = localStorage.getItem('telefone');
+  senha = localStorage.getItem('senha');
+  id = localStorage.getItem('id');
+  
   dataAtual: Date;
   localizacao: any;
   posts: any[];
 
   ngOnInit(){
     this.SeusPosts();
+    console.log("Bem vindo " + this.nome);
   }
 
   exibirPosts(posts: any[]) {
@@ -82,8 +89,10 @@ export class CadastroPostsComponent {
   }
 
   SeusPosts() {
-    $.get('http://localhost:3000/posts_usuario', {}, (res) => {
+    $.post('http://localhost:3000/posts_usuario', {email:this.email}, (res) => {
       let posts = res;
+      console.log("Recebi alguma coisa");
+      console.log(res);
       this.exibirPosts(posts);
     });
   }

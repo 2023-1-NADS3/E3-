@@ -11,6 +11,12 @@ import { HttpClient } from '@angular/common/http';
 export class LoginComponent {
   constructor(private http: HttpClient, private router: Router) {}
 
+  nome: string = '';
+  email: string = '';
+  telefone: string = '';
+  senha: string = '';
+  id: string = '';
+
   Login(email: string, senha: string) {
     console.log('Passei no primeiro ponto do login');
     $.get(
@@ -22,7 +28,9 @@ export class LoginComponent {
       (res) => {
         console.log(res);
         console.log('Passei no segundo ponto do login');
-        if (res === 'Login realizado com sucesso!') {
+        if (res === 'Login') {
+          console.log('Sua senha foi válidada!');
+          this.Dados(email);
           this.router.navigate(['/seletor']);
         } else if (res === 'Usuário não encontrado.') {
           alert('Usuário não encontrado.');
@@ -35,5 +43,34 @@ export class LoginComponent {
 
   formValido(): boolean {
     return true;
+  }
+
+  Dados(email: string) {
+    console.log('Fui acionado');
+
+    $.post(
+      'http://localhost:3000/dados_usuario',
+      {
+        email: email,
+      },
+      (res) => {
+        console.log('Trouxe dados!');
+        console.log(res);
+
+        this.id = res[0].ID;
+        this.nome = res[0].nome; // Verifique a estrutura do objeto JSON retornado e ajuste os índices ou propriedades adequadamente
+        this.senha = res[0].senha;
+        this.email = res[0].email;
+        this.telefone = res[0].telefone;
+        console.log('Trouxe dados!');
+        console.log(res);
+
+        localStorage.setItem('id', this.id); //salvando o id no localStorage
+        localStorage.setItem('nome', this.nome);
+        localStorage.setItem('senha', this.senha);
+        localStorage.setItem('email', this.email);
+        localStorage.setItem('telefone', this.telefone);
+      }
+    );
   }
 }

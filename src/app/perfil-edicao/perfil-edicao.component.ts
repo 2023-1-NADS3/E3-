@@ -8,21 +8,27 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './perfil-edicao.component.html',
   styleUrls: ['./perfil-edicao.component.css'],
 })
-export class PerfilEdicaoComponent {
+export class PerfilEdicaoComponent{
 
   constructor(private http: HttpClient, private router: Router) { }
+
+  id = localStorage.getItem('id');
+
+  ngOnInit() {
+    this.id = localStorage.getItem('id');
+  }
 
   AlterarDados(
     nome: string,
     senhaAtual: string,
     senha: string,
     email: string,
-    telefone: string
+    telefone: string,
   ) {
     console.log('Passei no primeiro ponto da altereção');
 
-    $.get(
-      'http://localhost:3000/dados_usuario',{},
+    $.post(
+      'http://localhost:3000/dados_usuario',{email:localStorage.getItem("email")},
       (res) => {
         console.log('Passei no check da senha.');
         console.log(res);
@@ -51,11 +57,16 @@ export class PerfilEdicaoComponent {
               senha: senha,
               email: email,
               telefone: telefone,
+              id:this.id
             },
             (res) => {
               console.log('Passei no terceiro ponto da alteração');
               console.log(res);
               console.log('Dados alterados!');
+              localStorage.setItem('nome', res[0].nome);
+              localStorage.setItem('senha', res[0].senha);
+              localStorage.setItem('email', res[0].email);
+              localStorage.setItem('telefone', res[0].telefone);
               window.location.href = '/perfil-proprio-usuario';
             }
           );

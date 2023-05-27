@@ -13,10 +13,6 @@ export class CadastroComponent {
 
   constructor(private http: HttpClient, private router: Router) { }
 
-  nomeSalvo = "";
-  emailSalvo = "";
-  telefoneSalvo = "";
-
   CriarConta(nome:string, senha:string, email:string, telefone:string) {
     console.log("Passei no primeiro ponto do cadastro");
     let termo = document.getElementById("termo") as HTMLInputElement;
@@ -50,10 +46,7 @@ export class CadastroComponent {
       }
       else {
         console.log("Usuário adicionado!");
-        window.location.href = "/seletor";
-        this.nomeSalvo = nome;
-        this.emailSalvo = email;
-        this.telefoneSalvo = telefone;
+        window.location.href = "/login";
       }
     });
     }
