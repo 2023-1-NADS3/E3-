@@ -12,6 +12,10 @@ body {
   padding: 0;
 }
 
+.container h1{
+  font-family: "Poppins";
+}
+
 .container {
   width: 100%;
   display: flex;

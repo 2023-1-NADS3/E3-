@@ -3,6 +3,7 @@ import * as $ from 'jquery';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { format } from 'date-fns';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-cadastro-posts',
@@ -15,6 +16,7 @@ export class CadastroPostsComponent {
     this.dataAtual = new Date();
     this.localizacao = {};
     this.posts = [];
+    this.cidade  = "São Paulo-SP";
   }
 
   nome = localStorage.getItem('nome');
@@ -22,7 +24,8 @@ export class CadastroPostsComponent {
   telefone = localStorage.getItem('telefone');
   senha = localStorage.getItem('senha');
   id = localStorage.getItem('id');
-  
+  cidade: string;
+
   dataAtual: Date;
   localizacao: any;
   posts: any[];
@@ -34,6 +37,7 @@ export class CadastroPostsComponent {
 
   exibirPosts(posts: any[]) {
     this.posts = posts;
+    this.obterLocalizacao();
   }
 
   obterLocalizacao() {
@@ -54,38 +58,67 @@ export class CadastroPostsComponent {
     }
   }
 
+  getCityFromCoordinates(latitude: number, longitude: number) {
+    const apiKey = 'AIzaSyBJoo6jHUgNc3a3_0TwYYmJn6EVYWnLr2o';
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${apiKey}`;
+  
+    return this.http.get(url).pipe(
+      map((response: any) => {
+        if (response && response.results && response.results.length > 0) {
+          return response.results[0].formatted_address;
+        }
+        return null;
+      })
+    );
+  }
+
   //CriarPost(titulo:string, valor:string, tipo:string, descricao:string, data:string, local:string, email:string, telefone:string)
   CriarPost(valor: string, tipo: string, descricao: string) {
     console.log('Passei no primeiro ponto do cadastro');
     let dataFormatada = format(this.dataAtual, 'dd.MM.yy');
 
-    if (descricao.length == 0) {
-      alert('Você precisa de uma descrição =)');
-      console.log('O campo descrição está vazio');
-    } 
-    else if (descricao.length > 30){
-      alert('Sua descrição não pode passar de 30 caracteres.');
-      console.log('O campo descrição está maior que 30 caracteres');
-    }
-    else {
-      console.log('Passei no segundo ponto do cadastro');
-      this.obterLocalizacao();
-      $.post(
-        'http://localhost:3000/cadastro_post',
-        {
-          "valor": valor,
-          "descricao": descricao,
-          "tipo": tipo,
-          "data": dataFormatada,
-          "local": this.localizacao,
-        },
-        (res) => {
-          console.log('Passei no terceiro ponto do cadastro');
-          console.log(res);
-          window.location.href = '/cadastro-posts';
+    this.getCityFromCoordinates(this.localizacao.latitude, this.localizacao.longitude)
+    .subscribe((resultado: string) => {
+      console.log("Cheguei no  passo de renomear a localização");
+      //this.cidade = resultado;
+      console.log(this.cidade);
+      console.log(resultado);
+      
+      if(this.cidade != ""){
+        if (descricao.length == 0) {
+          alert('Você precisa de uma descrição =)');
+          console.log('O campo descrição está vazio');
+        } 
+        else if (descricao.length > 30){
+          alert('Sua descrição não pode passar de 30 caracteres.');
+          console.log('O campo descrição está maior que 30 caracteres');
         }
-      );
-    }
+        else {
+          console.log('Passei no segundo ponto do cadastro');
+          $.post(
+            'http://localhost:3000/cadastro_post',
+            {
+              "valor": valor,
+              "descricao": descricao,
+              "tipo": tipo,
+              "data": dataFormatada,
+              "local": this.cidade,
+              "email": this.email,
+              "nome": this.nome,
+              "telefone": this.telefone,
+            },
+            (res) => {
+              console.log('Passei no terceiro ponto do cadastro');
+              console.log(res);
+              window.location.href = '/cadastro-posts';
+            }
+          );
+        }
+      }
+      else{
+        alert("Não conseguimos encontrar sua localização =(");
+      }
+    });
   }
 
   SeusPosts() {

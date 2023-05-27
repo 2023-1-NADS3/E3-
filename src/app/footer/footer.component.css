@@ -18,15 +18,19 @@
 
 .img1{
     width: 41px;
+    filter: drop-shadow(0 1px 1px #3333337f);
 }
 .img2{
     width: 40px;
+    filter: drop-shadow(0 1px 1px #3333337f);
 }
 .img3{
     width: 40px;
+    filter: drop-shadow(0 1px 1px #3333337f);
 }
 .img4{
     width: 41px;
+    filter: drop-shadow(0 1px 1px #3333337f);
 }
 
 .footer :active{

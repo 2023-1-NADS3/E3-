@@ -7,6 +7,10 @@
   margin-bottom: 10px;
 }
 
+.logo img{
+  filter: drop-shadow(0 2px 4px #3333337f);
+}
+
 label {
   font-weight: bold;
   display: block;
@@ -50,6 +54,7 @@ input[type="email"] {
   margin: 3%;
   margin-top: 5%;
   margin-bottom: 10px;
+  filter: drop-shadow(0 2px 4px #3333337f);
 }
 
 .login:active {

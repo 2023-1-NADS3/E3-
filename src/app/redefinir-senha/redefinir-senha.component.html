@@ -1,27 +1,37 @@
 <div class="container">
-  <h1>Redefina sua senha</h1>
+  <h1 class="h1">ATENÇÃO! VOCÊ ESTÁ PRESTES A DELETAR SUA CONTA</h1>
+  <h2 class="h2">Pense bem antes de fazer isso, pois está ação não tem volta.</h2>
+  <h3 class="h3">Mas você sempre pode se cadastrar novamente...</h3>
   <form>
     <div class="label_input">
-      <label for="nome">Senha atual:</label>
-      <input type="text" id="senha" name="senha" required placeholder="senha" />
-    </div>
-    <div class="label_input">
-      <label for="nome">Senha nova:</label>
-      <input type="text" id="senha" name="senha" required placeholder="senha" />
-    </div>
-    <div class="label_input">
-      <label for="nome">Confirmar senha:</label>
-      <input type="text" id="senha" name="senha" required placeholder="senha" />
+      <label for="">Confirme essa ação com sua senha:</label>
+      <input
+        type="password"
+        id="senha"
+        name="senha"
+        required
+        placeholder="senha"
+        #senhaTest
+      />
     </div>
     <div class="buttons">
       <div class="botao_esquerdo">
-        <a href="../perfil-proprio-usuario/"
-          ><button class="botao_esquerda">Cancelar</button></a
+        <button
+          class="botao_esquerda"
+          href="../perfil-proprio-usuario/"
+          (click)="Cancelar()"
         >
+          <a href="../perfil-proprio-usuario/">Cancelar</a>
+        </button>
       </div>
       <div class="botao_direito">
         <a href="../perfil-proprio-usuario/"
-          ><button class="botao_direita">Confirmar</button></a
+          ><button
+            class="botao_direita"
+            (click)="DeletarUsuario(senhaTest.value)"
+          >
+            Deletar
+          </button></a
         >
       </div>
     </div>

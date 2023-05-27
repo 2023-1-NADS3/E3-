@@ -114,6 +114,7 @@ textarea {
   width: 100px;
   height: 50px;
   border-radius: 40px;
+  filter: drop-shadow(0 2px 4px #333333);
 }
 
 .botao_alterar_conta {

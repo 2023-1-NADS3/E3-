@@ -53,11 +53,6 @@ export class PerfilProprioUsuarioComponent implements OnInit {
   }
 
   DeletarUsuario(){
-    console.log("Função acionada");
-
-    $.post('http://localhost:3000/delete_usuario', {id:this.id}, (res) => {
-      console.log(res);
-      window.location.href = '/';
-    });
+    window.location.href = '/redefinir-senha';
   }
 }

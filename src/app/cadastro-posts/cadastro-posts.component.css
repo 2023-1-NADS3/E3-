@@ -75,6 +75,7 @@ textarea {
   margin-top: 7%;
   padding: 12px 60px;
   font-size: 18px;
+  filter: drop-shadow(0 2px 4px #333333);
 }
 
 button:active {
@@ -177,8 +178,9 @@ p {
   font-size: 12px;
   border-radius: 20px;
   margin-right: 220px;
+  filter: drop-shadow(0 2px 4px #333333);
 }
 
 .espaco_footer{
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }

@@ -1,5 +1,5 @@
 .container{
-  padding: 10px 0;
+  font-family: "Poppins";
 }
 
 .form {
@@ -11,6 +11,7 @@
 }
 
 h1{
+  font-family: "Poppins";
     margin-top: 20px;
     margin-bottom: 7%;
     font-weight: bold;
@@ -63,6 +64,7 @@ input[type="number"] {
   margin-top: 7%;
   padding: 20px 70px;
   font-size: 15px;
+  filter: drop-shadow(0 2px 4px #3333337f);
 }
 
 .checkbox-wrapper-31:hover .check {
