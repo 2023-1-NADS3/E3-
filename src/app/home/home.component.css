@@ -24,6 +24,7 @@
   justify-content: center;
   align-items: center;
   animation: entradaLogo 4s;
+  filter: drop-shadow(0 10px 10px #3333337f);
 }
 
 @keyframes entradaLogo {
