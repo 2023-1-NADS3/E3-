@@ -19,16 +19,8 @@ form {
     font-family: "Poppins";
     font-weight: 400;
     font-size: 15px;
-    text-align: left;
-    padding: 30px 30px 0 30px;
-  }
-
-  .h3{
-    font-family: "Poppins";
-    font-weight: 400;
-    font-size: 15px;
-    text-align: left;
-    padding: 10px 30px 30px 30px;
+    text-align: center;
+    padding: 50px;
   }
   
   label {
@@ -39,6 +31,7 @@ form {
   }
   
   .label_input {
+    margin: 30px 0;
     width: 100%;
   }
   

@@ -1,4 +1,7 @@
-  <div class="container">
+<div *ngIf="showPreloader" class="preloader">
+  <img src="../../assets/img/gif/Slowfu.gif" alt="Preloader">
+</div>
+<div *ngIf="hideContainer" class="container">
     <div class="logo">
       <img src="assets/img/logoslowfu.png" alt="SlowFu" />
     </div>

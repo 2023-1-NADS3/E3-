@@ -1,30 +1,30 @@
 <div class="container">
-  <div class="card" *ngFor="let post of posts">
+  <div class="card" *ngIf="currentPostIndex < posts.length">
     <div class="informacoes_superiores">
       <div class="esquerda">
-        <h2 #tipo class="tipo">{{ post.tipo}}</h2>
-        <p #nome>{{ post.nome }}</p>
+        <h2 class="tipo">{{ posts[currentPostIndex].tipo}}</h2>
+        <p class="nome">{{ posts[currentPostIndex].nome }}</p>
       </div>
       <div class="direita">
-        <h2 #data>{{ post.data }}</h2>
-        <p #local>{{ post.local }}</p>
+        <h2 class="data">{{ posts[currentPostIndex].data }}</h2>
+        <p class="local">{{ posts[currentPostIndex].local }}</p>
         <p></p>
       </div>
     </div>
-    <img class="img_card" src="../../assets/img/posts/{{ post.tipo }}.jpg" alt="" #tipo/>
+    <img class="img_card" [src]="'../../assets/img/posts/' + posts[currentPostIndex].tipo + '.jpg'" alt="" />
     <div class="informacoes_inferiores">
-      <p #descricao>{{ post.descricao}}</p>
-      <p #valor>R${{ post.valor }} KG</p>
+      <p class="descricao">{{ posts[currentPostIndex].descricao}}</p>
+      <p class="valor">R${{ posts[currentPostIndex].valor }} KG</p>
     </div>
     <div class="buttons">
       <div class="botao_esquerdo">
-        <button class="botao_nao"><img src="../../assets/img/icone-x.png" alt=""></button>
+        <button class="botao_nao" (click)="proximoPost()"><img src="../../assets/img/icone-x.png" alt="" /></button>
       </div>
       <div class="botao_direito">
-        <button class="botao_sim" (click)="Ligar(numero.value, post.nome)"><img src="../../assets/img/chat-icone-seletor.png" alt=""></button>
+        <button class="botao_sim" (click)="Ligar(numero.value)"><img src="../../assets/img/chat-icone-seletor.png" alt=""></button>
       </div>
     </div>
-    <textarea class="escondidinho" value="{{post.telefone}}" #numero></textarea>
+    <textarea class="escondidinho" value="{{posts[currentPostIndex].telefone}}" #numero></textarea>
   </div>
 </div>
 <app-footer></app-footer>
