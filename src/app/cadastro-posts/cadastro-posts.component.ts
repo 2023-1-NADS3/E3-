@@ -33,6 +33,7 @@ export class CadastroPostsComponent {
   ngOnInit(){
     this.SeusPosts();
     console.log("Bem vindo " + this.nome);
+    this.ChecarLogin();
   }
 
   exibirPosts(posts: any[]) {
@@ -141,5 +142,17 @@ export class CadastroPostsComponent {
       window.location.href = '/cadastro-posts';
       this.SeusPosts();
     });
+  }
+
+  ChecarLogin(){
+    if (this.id == null || this.id == "nullID" || this.id == ""){
+      console.log("Você não está logado!");
+      console.log("O ID salvo é " + this.id);
+      alert("Você não está logado!");
+      window.location.href = '/';
+    }
+    else{
+      console.log("Tudo certo no teste de login " + this.nome + "!");
+    }
   }
 }

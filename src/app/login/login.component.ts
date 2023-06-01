@@ -11,6 +11,9 @@ import { HttpClient } from '@angular/common/http';
 export class LoginComponent {
   constructor(private http: HttpClient, private router: Router) {}
 
+  buttonCadastro: boolean = false;
+  buttonLogin: boolean = false;
+
   nome: string = '';
   email: string = '';
   telefone: string = '';
@@ -31,7 +34,11 @@ export class LoginComponent {
         if (res === 'Login') {
           console.log('Sua senha foi válidada!');
           this.Dados(email);
-          this.router.navigate(['/seletor']);
+          console.log("Tudo certo no login! aqui os dados salvos: "+this.id,this.nome,this.email,this.telefone);
+          this.buttonCadastro = true;
+          setTimeout(() => {
+            this.router.navigate(['/seletor']);
+          }, 1000);
         } else if (res === 'Usuário não encontrado.') {
           alert('Usuário não encontrado.');
         } else {
@@ -55,16 +62,12 @@ export class LoginComponent {
       },
       (res) => {
         console.log('Trouxe dados!');
-        console.log(res);
-
         this.id = res[0].ID;
         this.nome = res[0].nome; // Verifique a estrutura do objeto JSON retornado e ajuste os índices ou propriedades adequadamente
         this.senha = res[0].senha;
         this.email = res[0].email;
         this.telefone = res[0].telefone;
-        console.log('Trouxe dados!');
         console.log(res);
-
         localStorage.setItem('id', this.id); //salvando o id no localStorage
         localStorage.setItem('nome', this.nome);
         localStorage.setItem('senha', this.senha);
@@ -72,5 +75,19 @@ export class LoginComponent {
         localStorage.setItem('telefone', this.telefone);
       }
     );
+  }
+
+  Home(){
+    this.buttonLogin = true;
+    setTimeout(() => {
+      window.location.href = '/';
+    }, 1000);
+  }
+
+  Cadastro(){
+    this.buttonCadastro = true;
+    setTimeout(() => {
+      window.location.href = '/cadastro';
+    }, 1000);
   }
 }

@@ -14,7 +14,19 @@ export class SeletorComponent {
 
   constructor(private http: HttpClient) {}
 
+  nome = localStorage.getItem('nome');
+  email = localStorage.getItem('email');
+  telefone = localStorage.getItem('telefone');
+  senha = localStorage.getItem('senha');
+  id = localStorage.getItem('id');
+
   ngOnInit() {
+    this.nome = localStorage.getItem('nome');
+    this.email = localStorage.getItem('email');
+    this.telefone = localStorage.getItem('telefone');
+    this.senha = localStorage.getItem('senha');
+    this.id = localStorage.getItem('id');
+    this.ChecarLogin();
     this.getPosts();
   }
 
@@ -36,5 +48,17 @@ export class SeletorComponent {
   Ligar(numero: string) {
     console.log(numero);
     window.location.href = `https://api.whatsapp.com/send?phone=${numero}&text=Esse%20é%20o%20whatsapp%20do%20seu%20novo%20fornecedor!%20Seja%20gentil%20e%20lembre%20de%20contar%20referente%20a%20que%20produto%20você%20está%20entrando%20em%20contato.`;
+  }
+
+  ChecarLogin(){
+    if (this.id == null || this.id == "nullID" || this.id == ""){
+      console.log("Você não está logado!");
+      console.log("O ID salvo é " + this.id);
+      alert("Você não está logado!");
+      window.location.href = '/';
+    }
+    else{
+      console.log("Tudo certo no teste de login " + this.nome + "!");
+    }
   }
 }

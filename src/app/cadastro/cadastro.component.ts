@@ -13,6 +13,8 @@ export class CadastroComponent {
 
   constructor(private http: HttpClient, private router: Router) { }
 
+  buttonLogin: boolean = false;
+
   CriarConta(nome:string, senha:string, email:string, telefone:string) {
     console.log("Passei no primeiro ponto do cadastro");
     let termo = document.getElementById("termo") as HTMLInputElement;
@@ -59,6 +61,13 @@ export class CadastroComponent {
   
   formValido(): boolean {
     return true;
+  }
+
+  Login(){
+    this.buttonLogin = true;
+    setTimeout(() => {
+      window.location.href = '/login';
+    }, 1000);
   }
 }
 export class AppModule { }

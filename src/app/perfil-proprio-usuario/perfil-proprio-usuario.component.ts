@@ -24,6 +24,7 @@ export class PerfilProprioUsuarioComponent implements OnInit {
     this.telefone = localStorage.getItem('telefone');
     this.senha = localStorage.getItem('senha');
     this.id = localStorage.getItem('id');
+    this.ChecarLogin();
   }
 
   Sair() {
@@ -54,5 +55,17 @@ export class PerfilProprioUsuarioComponent implements OnInit {
 
   DeletarUsuario(){
     window.location.href = '/redefinir-senha';
+  }
+
+  ChecarLogin(){
+    if (this.id == null || this.id == "nullID" || this.id == ""){
+      console.log("Você não está logado!");
+      console.log("O ID salvo é " + this.id);
+      alert("Você não está logado!");
+      window.location.href = '/';
+    }
+    else{
+      console.log("Tudo certo no teste de login " + this.nome + "!");
+    }
   }
 }

@@ -12,10 +12,19 @@ export class PerfilEdicaoComponent{
 
   constructor(private http: HttpClient, private router: Router) { }
 
+  nome = localStorage.getItem('nome');
+  email = localStorage.getItem('email');
+  telefone = localStorage.getItem('telefone');
+  senha = localStorage.getItem('senha');
   id = localStorage.getItem('id');
 
   ngOnInit() {
+    this.nome = localStorage.getItem('nome');
+    this.email = localStorage.getItem('email');
+    this.telefone = localStorage.getItem('telefone');
+    this.senha = localStorage.getItem('senha');
     this.id = localStorage.getItem('id');
+    this.ChecarLogin();
   }
 
   AlterarDados(
@@ -73,5 +82,17 @@ export class PerfilEdicaoComponent{
         }}
       }
     );
+  }
+
+  ChecarLogin(){
+    if (this.id == null || this.id == "nullID" || this.id == ""){
+      console.log("Você não está logado!");
+      console.log("O ID salvo é " + this.id);
+      alert("Você não está logado!");
+      window.location.href = '/';
+    }
+    else{
+      console.log("Tudo certo no teste de login " + this.nome + "!");
+    }
   }
 }

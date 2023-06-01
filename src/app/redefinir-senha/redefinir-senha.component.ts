@@ -24,6 +24,7 @@ export class RedefinirSenhaComponent {
     this.telefone = localStorage.getItem('telefone');
     this.senha = localStorage.getItem('senha');
     this.id = localStorage.getItem('id');
+    this.ChecarLogin();
   }
 
   DeletarUsuario(senhaTest:string){
@@ -45,5 +46,17 @@ export class RedefinirSenhaComponent {
 
   Cancelar(){
     window.location.href = '/perfil-proprio-usuario';
+  }
+
+  ChecarLogin(){
+    if (this.id == null || this.id == "nullID" || this.id == ""){
+      console.log("Você não está logado!");
+      console.log("O ID salvo é " + this.id);
+      alert("Você não está logado!");
+      window.location.href = '/';
+    }
+    else{
+      console.log("Tudo certo no teste de login " + this.nome + "!");
+    }
   }
 }

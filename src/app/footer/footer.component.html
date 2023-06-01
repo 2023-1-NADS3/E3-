@@ -1,22 +1,22 @@
 <div class="container">
-  <div class="footer">
+  <div [class.buttonCadastro]="buttonCadastro" class="footer">
     <div>
-      <a href="../seletor"
+      <a (click)="Seletor()"
         ><img class="img1" src="../../assets/img/seletor-icone.png" alt=""
       /></a>
     </div>
     <div>
-      <a href="../cadastro-posts"
+      <a (click)="CadastroPosts()"
         ><img class="img2" src="../../assets/img/posts-icone.png" alt=""
       /></a>
     </div>
     <div class="chat-e-perfil">
-      <a href="../chat-home"
+      <a href="/chat"
         ><img class="img3" src="../../assets/img/chat-icone.png" alt=""
       /></a>
     </div>
     <div class="">
-      <a href="../perfil-proprio-usuario"
+      <a (click)="PerfilProprio()"
         ><img class="img4" src="../../assets/img/perfil-icone.png" alt=""
       /></a>
     </div>

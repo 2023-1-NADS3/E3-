@@ -1,3 +1,17 @@
+.container{
+  padding: 10px 0;
+  animation: entrada 1s;
+}
+
+@keyframes entrada {
+  0% {
+    transform: translateX(1000px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
 .card {
   max-width: 360px;
   width: 80%;

@@ -1,5 +1,29 @@
 .container{
+  padding: 10px 0;
+  animation: entrada 2s;
   font-family: "Poppins";
+}
+
+.buttonLogin{
+  animation: buttonLogin 2s;
+}
+
+@keyframes entrada {
+  0% {
+    transform: translateY(1000px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+@keyframes buttonLogin {
+  0% {
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-1000px);
+  }
 }
 
 .form {

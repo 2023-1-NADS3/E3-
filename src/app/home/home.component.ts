@@ -9,6 +9,9 @@ export class HomeComponent implements OnInit{
   showPreloader: boolean = true;
   hideContainer: boolean = false;
 
+  buttonLogin: boolean = false;
+  buttonCadastro: boolean = false;
+
   constructor(){}
 
   ngOnInit()
@@ -19,4 +22,17 @@ export class HomeComponent implements OnInit{
     }, 3000);
   }
   
+  Login(){
+    this.buttonLogin = true;
+    setTimeout(() => {
+      window.location.href = '/login';
+    }, 1000);
+  }
+
+  Cadastro(){
+    this.buttonCadastro = true;
+    setTimeout(() => {
+      window.location.href = '/cadastro';
+    }, 1000);
+  }
 }

@@ -1,6 +1,14 @@
 .container{
   padding: 10px 0;
-  animation: entrada 3s;
+  animation: entrada 2s;
+}
+
+.buttonLogin{
+  animation: buttonLogin 2s;
+}
+
+.buttonCadastro{
+  animation: buttonCadastro 2s;
 }
 
 @keyframes entrada {
@@ -9,6 +17,24 @@
   }
   100%{
     transform: translateY(0);
+  }
+}
+
+@keyframes buttonLogin {
+  0% {
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-1000px);
+  }
+}
+
+@keyframes buttonCadastro {
+  0% {
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(1000px);
   }
 }
 
@@ -29,7 +55,7 @@
 
 @keyframes entradaLogo {
   0% {
-    transform: translateY(-500px);
+    transform: translateY(-1000px);
   }
   50% {
     transform: translateY(0);

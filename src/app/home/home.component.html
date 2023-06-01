@@ -1,15 +1,16 @@
 <div *ngIf="showPreloader" class="preloader">
   <img src="../../assets/img/gif/Slowfu.gif" alt="Preloader">
 </div>
-<div *ngIf="hideContainer" class="container">
+<div [class.buttonLogin]="buttonLogin" [class.buttonCadastro]="buttonCadastro">
+<div *ngIf="hideContainer buttonlogin buttonCadastro" class="container">
     <div class="logo">
       <img src="assets/img/logoslowfu.png" alt="SlowFu" />
     </div>
     <h1 class="titulo">SlowFu</h1>
     <h2 class="manifesto">Fortalecendo a Policultura Familiar</h2>
     <div class="buttons">
-      <a class="login" href="../login">Login</a>
-      <a class="signup" href="../cadastro">Cadastrar</a>
+      <button class="login" id="buttonLogin" (click)="Login()">Login</button>
+      <button class="signup" id="buttonCadastro" (click)="Cadastro()">Cadastrar</button>
     </div>
     <h2 class="area_login_redes">Login com as redes sociais</h2>
     <div class="buttons">
@@ -17,3 +18,4 @@
       <button class="login_redes area_login_redes"><img src="../../assets/img/facebook-13.png" alt=""> Continuar com o facebook</button>
     </div>
   </div>
+</div>
