@@ -15,6 +15,18 @@ export class CadastroComponent {
 
   buttonLogin: boolean = false;
 
+  testCriarConta() {
+    const nome = "John Doe";
+    const senha = "senha123";
+    const email = "johndoe@example.com";
+    const telefone = "11234567890";
+    
+    this.CriarConta(nome, senha, email, telefone);
+    
+    // Verificar se o console.log foi chamado corretamente
+    // e se os demais passos do cadastro estão corretos.
+  }
+
   CriarConta(nome:string, senha:string, email:string, telefone:string) {
     console.log("Passei no primeiro ponto do cadastro");
     let termo = document.getElementById("termo") as HTMLInputElement;

@@ -20,6 +20,16 @@ export class LoginComponent {
   senha: string = '';
   id: string = '';
 
+  testLogin() {
+    const email = "johndoe@example.com";
+    const senha = "senha123";
+    
+    this.Login(email, senha);
+    
+    // Verificar se o console.log foi chamado corretamente
+    // e se os demais passos do login estão corretos.
+  }
+
   Login(email: string, senha: string) {
     console.log('Passei no primeiro ponto do login');
     $.get(

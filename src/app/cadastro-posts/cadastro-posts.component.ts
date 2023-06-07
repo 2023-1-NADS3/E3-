@@ -73,6 +73,17 @@ export class CadastroPostsComponent {
     );
   }
 
+  testCriarPost() {
+    const valor = "10";
+    const tipo = "banana";
+    const descricao = "teste de descrição do post";
+    
+    this.CriarPost(valor, tipo, descricao);
+    
+    // Verificar se o console.log foi chamado corretamente
+    // e se os demais passos do cadastro estão corretos.
+  }
+
   //CriarPost(titulo:string, valor:string, tipo:string, descricao:string, data:string, local:string, email:string, telefone:string)
   CriarPost(valor: string, tipo: string, descricao: string) {
     console.log('Passei no primeiro ponto do cadastro');
