@@ -15,7 +15,7 @@
 ## Descrição
 
 <p align="center">
-<img src="https://github.com/2023-1-NADS3/E3-/blob/main/src/assets/img/logoslowfu.png" alt="SLOW FU" border="0">
+<img src="https://github.com/2023-1-NADS3/E3-/blob/main/src/assets/img/logoslowfu.png" alt="SLOW FU" border="0" style="width:400px;">
  
  
  
