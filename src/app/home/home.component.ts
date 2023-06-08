@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit{
   showPreloader: boolean = true;
   hideContainer: boolean = false;
 
+  rota = localStorage.getItem('rota');
   buttonLogin: boolean = false;
   buttonCadastro: boolean = false;
 
@@ -16,11 +17,13 @@ export class HomeComponent implements OnInit{
 
   ngOnInit()
   {
+    localStorage.setItem('rota', "servidorslowfu-api.onrender.com");
+    this.rota=localStorage.getItem('rota');
+    console.log(this.rota);
     setTimeout(() => {
       this.showPreloader = false;
       this.hideContainer = true;
     }, 3000);
-    localStorage.setItem('rota', "localhost:3000");
   }
 
   Login(){

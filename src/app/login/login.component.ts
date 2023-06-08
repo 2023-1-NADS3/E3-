@@ -22,6 +22,11 @@ export class LoginComponent {
   senha: string = '';
   id: string = '';
 
+  ngOnInit() {
+    this.rota=localStorage.getItem('rota');
+    console.log(this.rota);
+  }
+
   testLogin() {
     const email = "johndoe@example.com";
     const senha = "senha123";
