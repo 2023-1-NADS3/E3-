@@ -14,6 +14,8 @@ export class LoginComponent {
   buttonCadastro: boolean = false;
   buttonLogin: boolean = false;
 
+  rota = localStorage.getItem('rota');
+
   nome: string = '';
   email: string = '';
   telefone: string = '';
@@ -23,9 +25,9 @@ export class LoginComponent {
   testLogin() {
     const email = "johndoe@example.com";
     const senha = "senha123";
-    
+
     this.Login(email, senha);
-    
+
     // Verificar se o console.log foi chamado corretamente
     // e se os demais passos do login estão corretos.
   }
@@ -33,7 +35,7 @@ export class LoginComponent {
   Login(email: string, senha: string) {
     console.log('Passei no primeiro ponto do login');
     $.get(
-      'http://localhost:3000/login',
+      `http://${this.rota}/login`,
       {
         email: email,
         senha: senha,
@@ -66,7 +68,7 @@ export class LoginComponent {
     console.log('Fui acionado');
 
     $.post(
-      'http://localhost:3000/dados_usuario',
+      `http://${this.rota}/dados_usuario`,
       {
         email: email,
       },

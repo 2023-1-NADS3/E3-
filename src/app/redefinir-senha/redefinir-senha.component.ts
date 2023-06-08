@@ -10,6 +10,8 @@ import * as $ from 'jquery' ;
 })
 export class RedefinirSenhaComponent {
 
+  rota = localStorage.getItem('rota');
+
   nome = localStorage.getItem('nome');
   email = localStorage.getItem('email');
   telefone = localStorage.getItem('telefone');
@@ -32,7 +34,7 @@ export class RedefinirSenhaComponent {
     if(senhaTest == this.senha)
     {
       console.log("Função acionada");
-      $.post('http://localhost:3000/delete_usuario', {id:this.id}, (res) => {
+      $.post(`http://${this.rota}/delete_usuario`, {id:this.id}, (res) => {
       console.log(res);
       alert("Você acaba de deletar seu Usuário PARA SEMPRE.");
       window.location.href = '/';

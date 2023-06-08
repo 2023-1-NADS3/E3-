@@ -10,6 +10,8 @@ import * as $ from 'jquery' ;
 })
 export class PerfilProprioUsuarioComponent implements OnInit {
 
+  rota = localStorage.getItem('rota');
+
   nome = localStorage.getItem('nome');
   email = localStorage.getItem('email');
   telefone = localStorage.getItem('telefone');
@@ -29,8 +31,8 @@ export class PerfilProprioUsuarioComponent implements OnInit {
 
   Sair() {
     console.log('Saindo!');
-    this.http.get<any>('http://localhost:3000/sair').subscribe(
-      (res) => 
+    this.http.get<any>(`http://${this.rota}/sair`).subscribe(
+      (res) =>
       {
         localStorage.setItem('nome','nullNome');
         localStorage.setItem('email','nullEmail');

@@ -14,6 +14,8 @@ export class SeletorComponent {
 
   constructor(private http: HttpClient) {}
 
+  rota = localStorage.getItem('rota');
+
   nome = localStorage.getItem('nome');
   email = localStorage.getItem('email');
   telefone = localStorage.getItem('telefone');
@@ -31,7 +33,7 @@ export class SeletorComponent {
   }
 
   getPosts() {
-    this.http.get('http://localhost:3000/todos_posts').subscribe((res: any) => {
+    this.http.get(`http://${this.rota}/todos_posts`).subscribe((res: any) => {
       this.posts = res;
       this.currentPostIndex = this.posts.length - 1;
     });

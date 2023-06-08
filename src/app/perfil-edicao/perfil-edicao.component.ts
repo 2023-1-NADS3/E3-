@@ -12,6 +12,8 @@ export class PerfilEdicaoComponent{
 
   constructor(private http: HttpClient, private router: Router) { }
 
+  rota = localStorage.getItem('rota');
+
   nome = localStorage.getItem('nome');
   email = localStorage.getItem('email');
   telefone = localStorage.getItem('telefone');
@@ -37,17 +39,17 @@ export class PerfilEdicaoComponent{
     console.log('Passei no primeiro ponto da altereção');
 
     $.post(
-      'http://localhost:3000/dados_usuario',{email:localStorage.getItem("email")},
+      `http://${this.rota}/dados_usuario`,{email:localStorage.getItem("email")},
       (res) => {
         console.log('Passei no check da senha.');
         console.log(res);
         console.log(res[0].senha);
-        
+
         if(senhaAtual != res[0].senha){
           console.log("A senha atual foi digitada errada.");
           alert('Parece que você digitou sua senha atual errado. Tente de novo.');
         }
-        else{    
+        else{
           if (nome.length < 3 || nome.length > 30) {
           alert('Seu nome precisa ter entre 3 e 30 caracteres.');
           console.log('Seu nome precisa ter entre 3 e 30 caracteres.');
@@ -60,7 +62,7 @@ export class PerfilEdicaoComponent{
         } else {
           console.log('Passei no segundo ponto da alteração');
           $.post(
-            'http://localhost:3000/alterar_dados_usuario',
+            `http://${this.rota}/alterar_dados_usuario`,
             {
               nome: nome,
               senha: senha,

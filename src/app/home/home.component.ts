@@ -20,8 +20,9 @@ export class HomeComponent implements OnInit{
       this.showPreloader = false;
       this.hideContainer = true;
     }, 3000);
+    localStorage.setItem('rota', "localhost:3000");
   }
-  
+
   Login(){
     this.buttonLogin = true;
     setTimeout(() => {

@@ -13,6 +13,8 @@ export class CadastroComponent {
 
   constructor(private http: HttpClient, private router: Router) { }
 
+  rota = localStorage.getItem('rota');
+
   buttonLogin: boolean = false;
 
   testCriarConta() {
@@ -20,9 +22,9 @@ export class CadastroComponent {
     const senha = "senha123";
     const email = "johndoe@example.com";
     const telefone = "11234567890";
-    
+
     this.CriarConta(nome, senha, email, telefone);
-    
+
     // Verificar se o console.log foi chamado corretamente
     // e se os demais passos do cadastro estão corretos.
   }
@@ -46,12 +48,12 @@ export class CadastroComponent {
     }
     else{
       console.log("Passei no segundo ponto do cadastro");
-      $.post("http://localhost:3000/cadastro_usuario", {
-      "nome":nome, 
-      "senha":senha, 
-      "email":email, 
+      $.post(`http://${this.rota}/cadastro_usuario`, {
+      "nome":nome,
+      "senha":senha,
+      "email":email,
       "telefone":telefone
-    }, 
+    },
     (res) => {
       console.log("Passei no terceiro ponto do cadastro");
       console.log(res);
@@ -70,7 +72,7 @@ export class CadastroComponent {
       console.log("Você precisa concordar com os Termos de Privacidade.");
     }
   }
-  
+
   formValido(): boolean {
     return true;
   }
