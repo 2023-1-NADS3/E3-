@@ -5,7 +5,8 @@
 </p>
 
 # SlowFu
-
+<br><br>
+<a href="https://bit.ly/slow-fu-mobile">USE AGORA!</a>
 ## E3
 
 ## Integrantes: <a href="https://github.com/Aline19982022">Aline Germano</a>, <a href="https://github.com/BrunaRodrigues16">Bruna Rodrigues</a>, <a href="https://github.com/GabrielaVenturaa">Gabriela Ventura</a>, <a href="https://github.com/mariazinhafefe">Maria Fernanda</a>, <a href="https://github.com/PedroRodante">Pedro Rodante</a>
