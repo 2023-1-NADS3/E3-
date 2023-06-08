@@ -8,7 +8,7 @@
 
 ## E3
 
-## Integrantes: <a href="https://github.com/Aline19982022">Aline Germano</a>, <a href="https://github.com/BrunaRodrigues16">Bruna Rodrigues</a>, <a href="https://github.com/PedroRodante">Pedro Rodante</a>, <a href="https://github.com/GabrielaVenturaa">Gabriela Ventura</a>, <a href="https://github.com/mariazinhafefe">Maria Fernanda</a>
+## Integrantes: <a href="https://github.com/Aline19982022">Aline Germano</a>, <a href="https://github.com/BrunaRodrigues16">Bruna Rodrigues</a>, <a href="https://github.com/GabrielaVenturaa">Gabriela Ventura</a>, <a href="https://github.com/mariazinhafefe">Maria Fernanda</a>, <a href="https://github.com/PedroRodante">Pedro Rodante</a>
 
 ## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Victor Bruno</a>, <a href="https://www.linkedin.com/in/jefferson-o-silva/">Jefferson Silva</a>, <a href="https://www.linkedin.com/in/aimarlopes/">Aimar Lopes</a>, <a href="https://www.linkedin.com/in/francisco-escobar/">Francisco Escobar</a>
 
