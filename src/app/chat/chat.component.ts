@@ -8,14 +8,14 @@ import { Component } from '@angular/core';
 export class ChatComponent {
   title = 'SlowFu';
   Conectar(){
-    $.get("http://localhost:3000/",
+    $.get("https://servidorslowfu-api.onrender.com/",
       function(resultado)
       {
         console.log(resultado);
       });
   }
 
-  valor="";  
+  valor="";
   AlterarCampo(valorCaixa:string)
   {
     this.valor=valorCaixa;

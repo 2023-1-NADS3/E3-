@@ -110,7 +110,7 @@ export class CadastroPostsComponent {
         else {
           console.log('Passei no segundo ponto do cadastro');
           $.post(
-            `http://${this.rota}/cadastro_post`,
+            `https://servidorslowfu-api.onrender.com/cadastro_post`,
             {
               "valor": valor,
               "descricao": descricao,
@@ -136,7 +136,7 @@ export class CadastroPostsComponent {
   }
 
   SeusPosts() {
-    $.post(`http://${this.rota}/posts_usuario`, {email:this.email}, (res) => {
+    $.post(`https://servidorslowfu-api.onrender.com/posts_usuario`, {email:this.email}, (res) => {
       let posts = res;
       console.log("Recebi alguma coisa");
       console.log(res);
@@ -148,7 +148,7 @@ export class CadastroPostsComponent {
     console.log("Função acionada");
     console.log(postID);
 
-    $.post(`http://${this.rota}/delete_post_usuario`, {
+    $.post(`https://servidorslowfu-api.onrender.com/delete_post_usuario`, {
       "postID":postID
     }, (res) => {
       console.log(res);
