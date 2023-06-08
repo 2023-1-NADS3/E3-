@@ -33,7 +33,7 @@ export class SeletorComponent {
   }
 
   getPosts() {
-    this.http.get(`http://${this.rota}/todos_posts`).subscribe((res: any) => {
+    this.http.get(`https://servidorslowfu-api.onrender.com/todos_posts`).subscribe((res: any) => {
       this.posts = res;
       this.currentPostIndex = this.posts.length - 1;
     });

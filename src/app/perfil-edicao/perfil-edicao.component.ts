@@ -39,7 +39,7 @@ export class PerfilEdicaoComponent{
     console.log('Passei no primeiro ponto da altereção');
 
     $.post(
-      `http://${this.rota}/dados_usuario`,{email:localStorage.getItem("email")},
+      `https://servidorslowfu-api.onrender.com/dados_usuario`,{email:localStorage.getItem("email")},
       (res) => {
         console.log('Passei no check da senha.');
         console.log(res);
@@ -62,7 +62,7 @@ export class PerfilEdicaoComponent{
         } else {
           console.log('Passei no segundo ponto da alteração');
           $.post(
-            `http://${this.rota}/alterar_dados_usuario`,
+            `https://servidorslowfu-api.onrender.com/alterar_dados_usuario`,
             {
               nome: nome,
               senha: senha,

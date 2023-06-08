@@ -34,7 +34,7 @@ export class RedefinirSenhaComponent {
     if(senhaTest == this.senha)
     {
       console.log("Função acionada");
-      $.post(`http://${this.rota}/delete_usuario`, {id:this.id}, (res) => {
+      $.post(`https://servidorslowfu-api.onrender.com/delete_usuario`, {id:this.id}, (res) => {
       console.log(res);
       alert("Você acaba de deletar seu Usuário PARA SEMPRE.");
       window.location.href = '/';

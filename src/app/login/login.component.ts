@@ -40,7 +40,7 @@ export class LoginComponent {
   Login(email: string, senha: string) {
     console.log('Passei no primeiro ponto do login');
     $.get(
-      `http://${this.rota}/login`,
+      `https://servidorslowfu-api.onrender.com/login`,
       {
         email: email,
         senha: senha,
@@ -73,7 +73,7 @@ export class LoginComponent {
     console.log('Fui acionado');
 
     $.post(
-      `http://${this.rota}/dados_usuario`,
+      `https://servidorslowfu-api.onrender.com/dados_usuario`,
       {
         email: email,
       },

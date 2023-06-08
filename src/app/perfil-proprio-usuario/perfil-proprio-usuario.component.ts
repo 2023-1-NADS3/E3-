@@ -31,7 +31,7 @@ export class PerfilProprioUsuarioComponent implements OnInit {
 
   Sair() {
     console.log('Saindo!');
-    this.http.get<any>(`http://${this.rota}/sair`).subscribe(
+    this.http.get<any>(`https://servidorslowfu-api.onrender.com/sair`).subscribe(
       (res) =>
       {
         localStorage.setItem('nome','nullNome');

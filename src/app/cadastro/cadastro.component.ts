@@ -48,7 +48,7 @@ export class CadastroComponent {
     }
     else{
       console.log("Passei no segundo ponto do cadastro");
-      $.post(`http://${this.rota}/cadastro_usuario`, {
+      $.post(`https://servidorslowfu-api.onrender.com/cadastro_usuario`, {
       "nome":nome,
       "senha":senha,
       "email":email,
