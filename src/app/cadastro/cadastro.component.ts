@@ -13,6 +13,7 @@ export class CadastroComponent {
 
   constructor(private http: HttpClient, private router: Router) { }
 
+  showPreloader: boolean = false;
   rota = localStorage.getItem('rota');
 
   buttonLogin: boolean = false;
@@ -47,6 +48,7 @@ export class CadastroComponent {
       console.log("Escreva um telefone válido com DDD. EX:11 98765-4321");
     }
     else{
+      this.showPreloader = true;
       console.log("Passei no segundo ponto do cadastro");
       $.post(`https://servidorslowfu-api.onrender.com/cadastro_usuario`, {
       "nome":nome,
@@ -58,10 +60,13 @@ export class CadastroComponent {
       console.log("Passei no terceiro ponto do cadastro");
       console.log(res);
       if (res === "Email já existe") {
+        this.showPreloader = false;
         alert("Esse email já foi cadastrado.");
       }
       else {
         console.log("Usuário adicionado!");
+        this.showPreloader = false;
+        alert("Perfeito! Seu usuário foi criado! Vamos fazer o login.");
         window.location.href = "/login";
       }
     });

@@ -11,6 +11,7 @@ import { HttpClient } from '@angular/common/http';
 export class LoginComponent {
   constructor(private http: HttpClient, private router: Router) {}
 
+  showPreloader: boolean = false;
   buttonCadastro: boolean = false;
   buttonLogin: boolean = false;
 
@@ -38,6 +39,7 @@ export class LoginComponent {
   }
 
   Login(email: string, senha: string) {
+    this.showPreloader = true;
     console.log('Passei no primeiro ponto do login');
     $.get(
       `https://servidorslowfu-api.onrender.com/login`,
@@ -52,13 +54,16 @@ export class LoginComponent {
           console.log('Sua senha foi válidada!');
           this.Dados(email);
           console.log("Tudo certo no login! aqui os dados salvos: "+this.id,this.nome,this.email,this.telefone);
+          this.showPreloader = false;
           this.buttonCadastro = true;
           setTimeout(() => {
             this.router.navigate(['/seletor']);
           }, 1000);
         } else if (res === 'Usuário não encontrado.') {
+          this.showPreloader = false;
           alert('Usuário não encontrado.');
         } else {
+          this.showPreloader = false;
           alert('Senha incorreta.');
         }
       }

@@ -68,6 +68,9 @@
     </div>
     <button class="buttons" (click)="CriarConta(nome.value, senha.value, email.value, telefone.value)">Criar Conta</button>
     <a class="voltar" (click)="Login()">Já tem conta? Faça o login!</a>
+    <div *ngIf="showPreloader" class="preloader">
+      <img src="../../assets/img/gif/Slowfu.gif" alt="Preloader">
+    </div>
   </div>
 </div>
 </div>

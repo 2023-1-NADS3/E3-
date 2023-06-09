@@ -1,3 +1,14 @@
+.preloader{
+  position: fixed;
+  z-index: 10;
+}
+
+.preloader img{
+  width: 120px;
+  padding: 150px;
+  filter: drop-shadow(0 10px 10px #3333337f);
+}
+
 .container{
   padding: 10px 0;
   animation: entrada 2s;
@@ -89,6 +100,13 @@ input[type="number"] {
   padding: 20px 70px;
   font-size: 15px;
   filter: drop-shadow(0 2px 4px #3333337f);
+}
+
+.buttons:active {
+  transition: 0.1s ease-in;
+  background-color: #3fb592;
+  border: 2px solid #3fb592;
+  transform: scale(0.9);
 }
 
 .checkbox-wrapper-31:hover .check {
