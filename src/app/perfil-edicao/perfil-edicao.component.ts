@@ -53,18 +53,22 @@ export class PerfilEdicaoComponent{
           this.showPreloader = false;
         }
         else{
-          if (nome.length < 3 || nome.length > 30) {
+          if (nome.length < 3 || nome.length > 30 ||nome.length == 0 || nome == "") {
           alert('Seu nome precisa ter entre 3 e 30 caracteres.');
           console.log('Seu nome precisa ter entre 3 e 30 caracteres.');
           this.showPreloader = false;
-        } else if (senha.length < 6 || senha.length > 12) {
+        } else if (senha.length < 6 || senha.length > 12 || senha.length == 0 || senha == "") {
           alert('Sua senha precisa ter entre 6 e 12 caracteres.');
           console.log('Sua senha precisa ter entre 6 e 12 caracteres.');
           this.showPreloader = false;
-        } else if (telefone.length < 11 || telefone.length > 11) {
+        } else if (telefone.length < 11 || telefone.length > 11 || telefone.length == 0 || telefone == "") {
           alert('Escreva um telefone válido com DDD. EX:11 98765-4321');
           console.log('Escreva um telefone válido com DDD. EX:11 98765-4321');
           this.showPreloader = false;
+        }else if (email.length == 0 || email == "") {
+        alert('Não deixe o email em branco.');
+        console.log('Não deixe o email em branco.');
+        this.showPreloader = false;
         } else {
           console.log('Passei no segundo ponto da alteração');
           $.post(

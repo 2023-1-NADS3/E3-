@@ -1,8 +1,10 @@
 <div class="container">
   <h1 class="h1">ATENÇÃO! VOCÊ ESTÁ PRESTES A DELETAR SUA CONTA</h1>
-  <h2 class="h2">Pense bem antes de fazer isso, pois essa ação não tem volta.</h2>
+  <h2 class="h2">
+    Pense bem antes de fazer isso, pois essa ação não tem volta.
+  </h2>
   <div *ngIf="showPreloader" class="preloader">
-    <img src="../../assets/img/gif/Slowfu.gif" alt="Preloader">
+    <img src="../../assets/img/gif/Slowfu.gif" alt="Preloader" />
   </div>
   <form>
     <div class="label_input">
@@ -27,14 +29,9 @@
         </button>
       </div>
       <div class="botao_direito">
-        <a href="../perfil-proprio-usuario/"
-          ><button
-            class="botao_direita"
-            (click)="DeletarUsuario(senhaTest.value)"
-          >
-            Deletar
-          </button></a
-        >
+        <button class="botao_direita" (click)="DeletarUsuario(senhaTest.value)">
+          Deletar
+        </button>
       </div>
     </div>
   </form>
