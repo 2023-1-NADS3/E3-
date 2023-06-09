@@ -19,6 +19,7 @@ export class CadastroPostsComponent {
     this.cidade  = "São Paulo-SP";
   }
 
+  showPreloader: boolean = false;
   rota = localStorage.getItem('rota');
 
   nome = localStorage.getItem('nome');
@@ -108,6 +109,7 @@ export class CadastroPostsComponent {
           console.log('O campo descrição está maior que 30 caracteres');
         }
         else {
+          this.showPreloader = true;
           console.log('Passei no segundo ponto do cadastro');
           $.post(
             `https://servidorslowfu-api.onrender.com/cadastro_post`,
@@ -124,6 +126,8 @@ export class CadastroPostsComponent {
             (res) => {
               console.log('Passei no terceiro ponto do cadastro');
               console.log(res);
+              alert("Perfeito! Post cadastrado!");
+              this.showPreloader = false;
               window.location.href = '/cadastro-posts';
             }
           );
