@@ -104,6 +104,9 @@
         placeholder="Descreva seu produto em uma frase"
         #descricao/>
     </div>
+    <div *ngIf="showPreloader" class="preloader">
+      <img src="../../assets/img/gif/Slowfu.gif" alt="Preloader">
+    </div>
     <button
       class="buttons"
       (click)="
@@ -145,9 +148,6 @@
         <button class="botao_editar">Editar</button>
       </div>
     </div>
-  </div>
-  <div *ngIf="showPreloader" class="preloader">
-    <img src="../../assets/img/gif/Slowfu.gif" alt="Preloader">
   </div>
   <div class="espaco_footer"></div>
 </div>

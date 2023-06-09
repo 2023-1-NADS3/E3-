@@ -91,7 +91,7 @@ export class CadastroPostsComponent {
   CriarPost(valor: string, tipo: string, descricao: string) {
     console.log('Passei no primeiro ponto do cadastro');
     let dataFormatada = format(this.dataAtual, 'dd.MM.yy');
-
+    this.showPreloader = true;
     this.getCityFromCoordinates(this.localizacao.latitude, this.localizacao.longitude)
     .subscribe((resultado: string) => {
       console.log("Cheguei no  passo de renomear a localização");
@@ -101,15 +101,26 @@ export class CadastroPostsComponent {
 
       if(this.cidade != ""){
         if (descricao.length == 0) {
-          alert('Você precisa de uma descrição =)');
+          alert('Você precisa de uma descrição.');
+          this.showPreloader = false;
           console.log('O campo descrição está vazio');
         }
         else if (descricao.length > 30){
           alert('Sua descrição não pode passar de 30 caracteres.');
+          this.showPreloader = false;
           console.log('O campo descrição está maior que 30 caracteres');
         }
+        else if (valor.length == 0){
+          alert('Você precisa adicionar um valor!');
+          this.showPreloader = false;
+          console.log('Você precisa adicionar um valor!');
+        }
+        else if (valor.length > 0 && valor.length < 4){
+          alert('Lembre-se de colocar a virgula e o 00 no final para não gerar confusões.');
+          this.showPreloader = false;
+          console.log('Lembre de colocar a virgula e o 00 no final.');
+        }
         else {
-          this.showPreloader = true;
           console.log('Passei no segundo ponto do cadastro');
           $.post(
             `https://servidorslowfu-api.onrender.com/cadastro_post`,
