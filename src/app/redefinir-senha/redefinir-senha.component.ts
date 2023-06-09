@@ -12,6 +12,8 @@ export class RedefinirSenhaComponent {
 
   rota = localStorage.getItem('rota');
 
+  showPreloader: boolean = false;
+
   nome = localStorage.getItem('nome');
   email = localStorage.getItem('email');
   telefone = localStorage.getItem('telefone');
@@ -30,19 +32,21 @@ export class RedefinirSenhaComponent {
   }
 
   DeletarUsuario(senhaTest:string){
-
+    this.showPreloader = true;
     if(senhaTest == this.senha)
     {
       console.log("Função acionada");
       $.post(`https://servidorslowfu-api.onrender.com/delete_usuario`, {id:this.id}, (res) => {
       console.log(res);
       alert("Você acaba de deletar seu Usuário PARA SEMPRE.");
+      this.showPreloader = false;
       window.location.href = '/';
       });
     }
     else
     {
       alert("Parece que você digitou a senha errada.");
+      this.showPreloader = false;
     }
   }
 

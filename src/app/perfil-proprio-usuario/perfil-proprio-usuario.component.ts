@@ -11,6 +11,8 @@ import * as $ from 'jquery' ;
 export class PerfilProprioUsuarioComponent implements OnInit {
 
   rota = localStorage.getItem('rota');
+  
+  showPreloader: boolean = false;
 
   nome = localStorage.getItem('nome');
   email = localStorage.getItem('email');
@@ -31,6 +33,7 @@ export class PerfilProprioUsuarioComponent implements OnInit {
 
   Sair() {
     console.log('Saindo!');
+    this.showPreloader = true;
     this.http.get<any>(`https://servidorslowfu-api.onrender.com/sair`).subscribe(
       (res) =>
       {
@@ -47,10 +50,13 @@ export class PerfilProprioUsuarioComponent implements OnInit {
 
         console.log(res);
         console.log("Valores finais: " + this.nome, this.email, this.telefone, this.senha, this.id);
+        this.showPreloader = false;
         window.location.href = '/';
       },
       (error) => {
         console.log('Ocorreu um erro ao obter os dados do usuário:', error);
+        alert("Ocorreu um erro, tente sair novamente.");
+        this.showPreloader = false;
       }
     );
   }

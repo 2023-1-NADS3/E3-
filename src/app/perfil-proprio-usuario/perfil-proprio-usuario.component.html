@@ -21,6 +21,9 @@
     <div class="buttons">
       <button class="botao_sair" (click)="Sair()">Sair</button>
     </div>
+    <div *ngIf="showPreloader" class="preloader">
+      <img src="../../assets/img/gif/Slowfu.gif" alt="Preloader">
+    </div>
   </div>
 </div>
 <app-footer></app-footer>
