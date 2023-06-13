@@ -47,6 +47,10 @@ export class CadastroComponent {
       alert("Escreva um telefone válido com DDD. EX:11 98765-4321");
       console.log("Escreva um telefone válido com DDD. EX:11 98765-4321");
     }
+    else if(email.length < 10 || email.length > 100){
+      alert("Lembre de colocar um email valido.");
+      console.log("Lembre de colocar um email valido.");
+    }
     else{
       this.showPreloader = true;
       console.log("Passei no segundo ponto do cadastro");

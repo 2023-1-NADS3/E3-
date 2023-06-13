@@ -18,7 +18,7 @@ export class RedefinirSenhaComponent {
 
   constructor(private http: HttpClient, private router: Router) {}
 
-  showPreloader: boolean = false;
+  showPreloader: boolean = true;
 
   ngOnInit() {
     this.nome = localStorage.getItem('nome');
@@ -27,36 +27,48 @@ export class RedefinirSenhaComponent {
     this.senha = localStorage.getItem('senha');
     this.id = localStorage.getItem('id');
     this.ChecarLogin();
-  }
-
-  PreloaderTrue(){
-    this.showPreloader = true;
+    this.showPreloader = false;
   }
 
   DeletarUsuario(senhaTest: string) {
-    this.PreloaderTrue();
-    if (senhaTest == "" || senhaTest.length == 0) {
-      alert("Você precisa inserir sua senha para DELETAR A CONTA.");
-      this.showPreloader = false;
-    } 
-    else {
-      if (senhaTest == this.senha) {
-        console.log('Função acionada');
-        $.post(
-          `https://servidorslowfu-api.onrender.com/delete_usuario`,
-          { id: this.id },
-          (res) => {
-            console.log(res);
-            alert('Você acaba de deletar seu Usuário PARA SEMPRE.');
-            this.showPreloader = false;
-            window.location.href = '/';
-          }
-        );
-      } 
-      else {
-        alert('Parece que você digitou a senha errada.');
+    if (this.id != '') {
+      this.showPreloader = true;
+      if (senhaTest == '' || senhaTest.length == 0) {
+        alert('Você precisa inserir sua senha para DELETAR A CONTA.');
         this.showPreloader = false;
+      } else {
+        if (senhaTest == this.senha) {
+          console.log('Função acionada');
+          $.post(
+            `https://servidorslowfu-api.onrender.com/delete_usuario`,
+            { id: this.id },
+            (res) => {
+              console.log(res);
+              alert('Você acaba de deletar seu Usuário PARA SEMPRE.');
+              this.showPreloader = false;
+
+              localStorage.setItem('nome', 'nullNome');
+              localStorage.setItem('email', 'nullEmail');
+              localStorage.setItem('telefone', 'nullTelefone');
+              localStorage.setItem('senha', 'nullSenha');
+              localStorage.setItem('id', 'nullID');
+              this.nome = localStorage.getItem('nome');
+              this.email = localStorage.getItem('email');
+              this.telefone = localStorage.getItem('telefone');
+              this.senha = localStorage.getItem('senha');
+              this.id = localStorage.getItem('id');
+
+              window.location.href = '/';
+            }
+          );
+        } else {
+          alert('Parece que você digitou a senha errada.');
+          this.showPreloader = false;
+        }
       }
+    } else {
+      alert('Você não está logado!');
+      window.location.href = '/';
     }
   }
 
