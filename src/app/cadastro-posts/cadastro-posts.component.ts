@@ -92,12 +92,14 @@ export class CadastroPostsComponent {
     console.log('Passei no primeiro ponto do cadastro');
     let dataFormatada = format(this.dataAtual, 'dd.MM.yy');
     this.showPreloader = true;
-    this.getCityFromCoordinates(this.localizacao.latitude, this.localizacao.longitude)
+    
+  /*this.getCityFromCoordinates(this.localizacao.latitude, this.localizacao.longitude)
     .subscribe((resultado: string) => {
       console.log("Cheguei no  passo de renomear a localização");
-      //this.cidade = resultado;
+      this.cidade = resultado;
       console.log(this.cidade);
-      console.log(resultado);
+      console.log(resultado);    
+    }); */
 
       if(this.cidade != ""){
         if (descricao.length == 0) {
@@ -147,7 +149,6 @@ export class CadastroPostsComponent {
       else{
         alert("Não conseguimos encontrar sua localização =(");
       }
-    });
   }
 
   SeusPosts() {
